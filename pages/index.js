@@ -6,11 +6,10 @@ import {
   Heading,
   Link,
   Button,
-  Image as ChakraImage,
   useColorMode
 } from '@chakra-ui/react';
-import Image from 'next/image';
 import profilePic from '../public/gumshoe.png';
+import Image from '../components/Image';
 
 function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -27,13 +26,16 @@ function Home() {
           justifyContent="center"
           textAlign="center"
         >
-          <ChakraImage
-            as={Image}
-            alt="Gumshoe's Profile Picture of a cartoon private investigator."
-            src="/gumshoe.png"
-            borderRadius="full"
-            mb={8}
-          ></ChakraImage>
+          <Box mb={10}>
+            <Image
+              alt="Gumshoe's Profile Picture of a cartoon private investigator."
+              src={profilePic}
+              width={5}
+              height={5}
+              borderRadius="full"
+              mb={20}
+            />
+          </Box>
           <Heading fontSize="4.8rem" mb={8}>
             Hi, I&apos;m Matthew
           </Heading>
