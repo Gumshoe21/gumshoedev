@@ -6,10 +6,10 @@ import {
   Heading,
   Link,
   Button,
-  Image,
+  Image as ChakraImage,
   useColorMode
 } from '@chakra-ui/react';
-import { Image as NextImage } from 'next/image';
+import Image from 'next/image';
 import profilePic from '../public/gumshoe.png';
 
 function Home() {
@@ -27,17 +27,18 @@ function Home() {
           justifyContent="center"
           textAlign="center"
         >
-          <Image
-            as={NextImage}
+          <ChakraImage
+            as={Image}
+            alt="Gumshoe's Profile Picture of a cartoon private investigator."
             src="/gumshoe.png"
             borderRadius="full"
             mb={8}
-          ></Image>
+          ></ChakraImage>
           <Heading fontSize="4.8rem" mb={8}>
-            Hi, I'm Matthew
+            Hi, I&apos;m Matthew
           </Heading>
           <Heading fontSize="2.2rem" mb={4}>
-            I'm a Full Stack Web Developer from Los Angeles, California.
+            I&apos;m a Full Stack Web Developer from Los Angeles, California.
           </Heading>
           <Heading fontSize="2.2rem">
             I also like to write &mdash; check out{' '}
