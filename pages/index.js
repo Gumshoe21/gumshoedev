@@ -18,6 +18,7 @@ import Navbar from '../components/Navbar/Navbar';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import NavLink from './../components/Navbar/NavLink';
 import NextLink from 'next/link';
+import NextImage from 'next/image';
 
 function Home() {
   const blogLinkColor = useColorModeValue('blue.500', 'purple.300');
@@ -32,15 +33,12 @@ function Home() {
           justifyContent="flex-start"
           textAlign="center"
         >
-          <Box mb={4}>
+          <Box mb={2} borderRadius="50%">
             <Image
-              overflow="visible"
-              objectFit="contain"
-              height="unset"
-              alt="Gumshoe's Profile Picture of a cartoon private investigator."
+              borderRadius="50%"
               src={profilePic}
               boxShadow="0px 10px 10px -8px #000"
-              borderRadius="70%"
+              transform="translateY(-10px)"
             />
           </Box>
           <Heading mb={8} size="2xl">
@@ -60,7 +58,11 @@ function Home() {
               <IconButton
                 icon={<FaTwitter size={30} />}
                 bg="none"
-                _hover={{ cursor: 'pointer', bg: 'none' }}
+                _hover={{
+                  cursor: 'pointer',
+                  bg: 'none',
+                  transform: 'translateY(-2px)'
+                }}
                 _active={{ cursor: 'pointer', bg: 'none' }}
                 color="#1DA1F2"
               />
@@ -69,7 +71,12 @@ function Home() {
               <IconButton
                 icon={<FaLinkedin size={30} />}
                 bg="none"
-                _hover={{ cursor: 'pointer', bg: 'none' }}
+                _hover={{
+                  cursor: 'pointer',
+                  bg: 'none',
+
+                  transform: 'translateY(-2px)'
+                }}
                 _active={{ cursor: 'pointer', bg: 'none' }}
                 color="#0a66c2"
               />
@@ -79,7 +86,12 @@ function Home() {
               <IconButton
                 icon={<FaGithub size={30} />}
                 bg="none"
-                _hover={{ cursor: 'pointer', bg: 'none' }}
+                _hover={{
+                  cursor: 'pointer',
+                  bg: 'none',
+
+                  transform: 'translateY(-2px)'
+                }}
                 _active={{ cursor: 'pointer', bg: 'none' }}
               />
             </NextLink>

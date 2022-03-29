@@ -8,7 +8,7 @@ const Img = chakra(NextImage, {
 });
 
 const Image = (ImageProps) => {
-  return <Img overflow="visible" {...ImageProps} />;
+  return <Img {...ImageProps} />;
 };
 
 export default Image;
