@@ -26,7 +26,7 @@ function Home() {
   return (
     <Fragment>
       <Navbar />
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" py={8}>
         <Flex
           flexDirection="column"
           alignItems="center"
