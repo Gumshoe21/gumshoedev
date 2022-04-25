@@ -15,6 +15,11 @@ const theme = extendTheme({
         padding: '0',
         margin: '0',
         boxSizing: 'border-box'
+      },
+      '#__next': {
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column'
       }
     })
   },
