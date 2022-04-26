@@ -53,6 +53,7 @@ function Home() {
         height="100vh"
         textAlign="center"
         bg={heroBgColor}
+        transitionDuration="200ms"
       >
         <Box mb={2} borderRadius="50%">
           <Image
@@ -131,7 +132,11 @@ function Home() {
           </NextLink>
         </Flex>
       </Flex>
-      <Flex bg={section1BgColor} justifyContent="center">
+      <Flex
+        bg={section1BgColor}
+        justifyContent="center"
+        transitionDuration="200ms"
+      >
         <Flex
           direction="column"
           alignItems="center"
