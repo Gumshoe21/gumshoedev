@@ -36,10 +36,14 @@ import {
 import { DiHtml5, DiCss3, DiJavascript, DiMongodb, Di } from 'react-icons/di';
 import NextLink from 'next/link';
 import TechItem from './../components/Home/TechItem';
+import SocialButton from './../components/Home/SocialButton';
 
 function Home() {
   const blogLinkColor = useColorModeValue('blue.500', 'purple.300');
   const envelopeIconColor = blogLinkColor;
+  const twitterIconColor = '#1DA1F2';
+  const linkedInIconColor = '#0a66c2';
+
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
   const section1BgColor = useColorModeValue('orange.100', 'gray.600');
 
@@ -54,6 +58,7 @@ function Home() {
         textAlign="center"
         bg={heroBgColor}
         transitionDuration="200ms"
+        px={4}
       >
         <Box mb={2} borderRadius="50%">
           <Image
@@ -75,6 +80,7 @@ function Home() {
             my ramblings.
           </Link>
         </Heading>
+
         <Flex columnGap={2}>
           <NextLink href="mailto:matthew@gumshoe.dev">
             <IconButton
@@ -116,7 +122,6 @@ function Home() {
               color="#0a66c2"
             />
           </NextLink>
-
           <NextLink href="https://github.com/Gumshoe21">
             <IconButton
               icon={<FaGithub size={30} />}
@@ -146,18 +151,23 @@ function Home() {
         >
           <Heading
             mb={8}
-            fontSize={30}
+            fontSize={{ md: 30, sm: 24 }}
             letterSpacing="1rem"
             textTransform="uppercase"
           >
             Tech Stack
           </Heading>
-          <Flex p={8} gap={60}>
+          <Flex
+            p={8}
+            gap={{ md: 40, sm: 20, base: 4 }}
+            align="center"
+            justify="center"
+          >
             <TechItem icon={FaHtml5} label={'HTML5'} />
             <TechItem icon={FaCss3Alt} label={'CSS3'} />
             <TechItem icon={SiJavascript} label={'JavaScript'} />
           </Flex>
-          <Flex p={8} gap={60}>
+          <Flex p={8} gap={{ md: 40, sm: 20, base: 4 }}>
             <TechItem icon={SiMongodb} label={'MongoDB'} />
             <TechItem icon={SiExpress} label={'ExpressJS'} />
             <TechItem icon={FaReact} label={'ReactJS'} />
