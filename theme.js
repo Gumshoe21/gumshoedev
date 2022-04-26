@@ -17,7 +17,6 @@ const theme = extendTheme({
         boxSizing: 'border-box'
       },
       '#__next': {
-        height: '100vh',
         display: 'flex',
         flexDirection: 'column'
       }

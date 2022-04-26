@@ -46,6 +46,7 @@ const Navbar = () => {
           justify={{ md: 'center', sm: 'center' }}
           mr={{ sm: 4 }}
           w="100%"
+          position="fixed"
         >
           <Flex
             w="100%"
