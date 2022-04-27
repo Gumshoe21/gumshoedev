@@ -36,11 +36,13 @@ const Navbar = () => {
 
   const iconBackgroundHover = useColorModeValue('purple.800', 'orange.300');
   const iconColor = useColorModeValue('whiteAlpha.900', 'gray.900');
-
+  const navbarBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
   return (
     <Fragment>
       <Box>
         <Flex
+          zIndex="9999"
+          bg={navbarBgColor}
           py={4}
           alignItems="center"
           justify={{ md: 'center', sm: 'center' }}
@@ -53,7 +55,7 @@ const Navbar = () => {
             justify="center"
             align="center"
             flexDirection="row"
-            columnGap={8}
+            columnGap={10}
           >
             <Tooltip label="Under Construction!">
               <Text fontWeight="bold">Projects</Text>

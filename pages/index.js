@@ -141,33 +141,30 @@ function Home() {
         bg={section1BgColor}
         justifyContent="center"
         transitionDuration="200ms"
+        py={20}
       >
-        <Flex
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          py={20}
-          gap={8}
-        >
+        <Flex direction="column" alignItems="center" justifyContent="center">
           <Heading
-            mb={8}
             fontSize={{ md: 30, sm: 24 }}
             letterSpacing="1rem"
             textTransform="uppercase"
+            textAlign="center"
+            ml={4}
+            mb={16}
           >
-            Tech Stack
+            TECH STACK
           </Heading>
           <Flex
-            p={8}
-            gap={{ md: 40, sm: 20, base: 4 }}
+            gap={{ md: 40, sm: 10, base: 4 }}
             align="center"
             justify="center"
+            p={6}
           >
             <TechItem icon={FaHtml5} label={'HTML5'} />
             <TechItem icon={FaCss3Alt} label={'CSS3'} />
             <TechItem icon={SiJavascript} label={'JavaScript'} />
           </Flex>
-          <Flex p={8} gap={{ md: 40, sm: 20, base: 4 }}>
+          <Flex p={6} gap={{ md: 40, sm: 10, base: 4 }}>
             <TechItem icon={SiMongodb} label={'MongoDB'} />
             <TechItem icon={SiExpress} label={'ExpressJS'} />
             <TechItem icon={FaReact} label={'ReactJS'} />
