@@ -10,7 +10,9 @@ import {
   useColorModeValue,
   Icon,
   IconButton,
-  Tooltip
+  Tooltip,
+  Grid,
+  GridItem
 } from '@chakra-ui/react';
 import profilePic from '../public/gumshoe.png';
 import Image from '../components/Image';
@@ -137,11 +139,13 @@ function Home() {
           </NextLink>
         </Flex>
       </Flex>
+
       <Flex
         bg={section1BgColor}
         justifyContent="center"
         transitionDuration="200ms"
         py={20}
+        px={4}
       >
         <Flex direction="column" alignItems="center" justifyContent="center">
           <Heading
@@ -154,22 +158,42 @@ function Home() {
           >
             TECH STACK
           </Heading>
-          <Flex
-            gap={{ md: 40, sm: 10, base: 4 }}
-            align="center"
-            justify="center"
-            p={6}
+          <Grid
+            templateColumns="repeat(8,1fr)"
+            templateRows="repeat(2,1fr)"
+            gap={{ md: 10, sm: 4 }}
           >
-            <TechItem icon={FaHtml5} label={'HTML5'} />
-            <TechItem icon={FaCss3Alt} label={'CSS3'} />
-            <TechItem icon={SiJavascript} label={'JavaScript'} />
-          </Flex>
-          <Flex p={6} gap={{ md: 40, sm: 10, base: 4 }}>
-            <TechItem icon={SiMongodb} label={'MongoDB'} />
-            <TechItem icon={SiExpress} label={'ExpressJS'} />
-            <TechItem icon={FaReact} label={'ReactJS'} />
-            <TechItem icon={FaNodeJs} label={'NodeJS'} />
-          </Flex>
+            <GridItem gridColumn="2 / 4" gridRow="1 / 2">
+              <TechItem icon={FaHtml5} label={'HTML5'} color="#E34C26" />
+            </GridItem>
+            <GridItem gridColumn="4 / 6" gridRow="1 / 2">
+              <TechItem icon={FaCss3Alt} label={'CSS3'} color="#264de4" />
+            </GridItem>
+
+            <GridItem gridColumn="6 / 8" gridRow="1 / 2">
+              <TechItem
+                icon={SiJavascript}
+                label={'JavaScript'}
+                color="#f7df1e"
+              />
+            </GridItem>
+
+            <GridItem gridColumn="1/3" gridRow="2/3">
+              <TechItem icon={SiMongodb} label={'MongoDB'} color="#4DB33D" />
+            </GridItem>
+
+            <GridItem gridColumn="3/5" gridRow="2/3">
+              <TechItem icon={SiExpress} label={'ExpressJS'} color="#828282" />
+            </GridItem>
+
+            <GridItem gridColumn="5/7" gridRow="2/3">
+              <TechItem icon={FaReact} label={'ReactJS'} color="#61DBFB" />
+            </GridItem>
+
+            <GridItem gridColumn="7/9" gridRow="2/3">
+              <TechItem icon={FaNodeJs} label={'NodeJS'} color="#68A063" />
+            </GridItem>
+          </Grid>
         </Flex>
       </Flex>
     </Fragment>
