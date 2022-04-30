@@ -1,13 +1,13 @@
-import IconButton from '@chakra-ui/icons';
+import { IconButton } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 const SocialButton = (props) => {
-  const { icon, color, href } = props;
-  const Icon = icon;
+  const { color, href, svg } = props;
+  const Svg = svg;
   return (
     <NextLink href={href}>
       <IconButton
-        icon={<Icon size={30} />}
+        icon={<Svg size={30} />}
         bg="none"
         _hover={{
           cursor: 'pointer',

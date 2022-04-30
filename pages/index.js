@@ -40,14 +40,14 @@ import NextLink from 'next/link';
 import TechItem from './../components/Home/TechItem';
 import SocialButton from './../components/Home/SocialButton';
 
-function Home() {
+const Home = () => {
   const blogLinkColor = useColorModeValue('blue.500', 'purple.300');
   const envelopeIconColor = blogLinkColor;
   const twitterIconColor = '#1DA1F2';
   const linkedInIconColor = '#0a66c2';
 
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
-  const section1BgColor = useColorModeValue('orange.100', 'gray.600');
+  const section1BgColor = useColorModeValue('orange.50', 'gray.600');
 
   return (
     <Fragment>
@@ -82,61 +82,23 @@ function Home() {
             my ramblings.
           </Link>
         </Heading>
-
         <Flex columnGap={2}>
-          <NextLink href="mailto:matthew@gumshoe.dev">
-            <IconButton
-              icon={<FaEnvelope size={30} />}
-              bg="none"
-              _hover={{
-                cursor: 'pointer',
-                bg: 'none',
-                transform: 'translateY(-2px)'
-              }}
-              _active={{ cursor: 'pointer', bg: 'none' }}
-              color={envelopeIconColor}
-            />
-          </NextLink>
-          <NextLink href="https://twitter.com/gumshoedev">
-            <IconButton
-              icon={<FaTwitter size={30} />}
-              bg="none"
-              _hover={{
-                cursor: 'pointer',
-                bg: 'none',
-                transform: 'translateY(-2px)'
-              }}
-              _active={{ cursor: 'pointer', bg: 'none' }}
-              color="#1DA1F2"
-            />
-          </NextLink>
-          <NextLink href="https://linkedin.com/in/matthew-smilansky">
-            <IconButton
-              icon={<FaLinkedin size={30} />}
-              bg="none"
-              _hover={{
-                cursor: 'pointer',
-                bg: 'none',
-
-                transform: 'translateY(-2px)'
-              }}
-              _active={{ cursor: 'pointer', bg: 'none' }}
-              color="#0a66c2"
-            />
-          </NextLink>
-          <NextLink href="https://github.com/Gumshoe21">
-            <IconButton
-              icon={<FaGithub size={30} />}
-              bg="none"
-              _hover={{
-                cursor: 'pointer',
-                bg: 'none',
-
-                transform: 'translateY(-2px)'
-              }}
-              _active={{ cursor: 'pointer', bg: 'none' }}
-            />
-          </NextLink>
+          <SocialButton
+            svg={FaEnvelope}
+            color={envelopeIconColor}
+            href="mailto:matthew@gumshoe.dev"
+          />
+          <SocialButton
+            svg={FaTwitter}
+            color={twitterIconColor}
+            href="https://twitter.com/Gumshoe21"
+          />
+          <SocialButton
+            svg={FaLinkedin}
+            color={linkedInIconColor}
+            href="https://linkedin.com/in/matthew-smilansky"
+          />
+          <SocialButton svg={FaGithub} href="https://github.com/Gumshoe21" />
         </Flex>
       </Flex>
 
@@ -198,6 +160,6 @@ function Home() {
       </Flex>
     </Fragment>
   );
-}
+};
 
 export default Home;
