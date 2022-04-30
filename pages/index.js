@@ -161,7 +161,7 @@ function Home() {
           <Grid
             templateColumns="repeat(8,1fr)"
             templateRows="repeat(2,1fr)"
-            gap={{ md: 10, sm: 4 }}
+            gap={{ md: 10, sm: 4, base: 4 }}
           >
             <GridItem gridColumn="2 / 4" gridRow="1 / 2">
               <TechItem icon={FaHtml5} label={'HTML5'} color="#E34C26" />
