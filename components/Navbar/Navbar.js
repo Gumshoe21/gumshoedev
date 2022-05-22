@@ -39,9 +39,8 @@ const Navbar = () => {
   const navbarBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
   return (
     <Fragment>
-      <Box>
+      <Box zIndex="9999">
         <Flex
-          zIndex="9999"
           bg={navbarBgColor}
           py={4}
           alignItems="center"
@@ -52,12 +51,17 @@ const Navbar = () => {
         >
           <Flex
             w="100%"
+            zIndex="9999"
             justify="center"
             align="center"
             flexDirection="row"
             columnGap={10}
           >
-            <Tooltip label="Under Construction!">
+            <Tooltip
+              placement="bottom"
+              zIndex="10000"
+              label="Under Construction!"
+            >
               <Text fontWeight="bold">Projects</Text>
             </Tooltip>
             <NavLink href="https://blog.gumshoe.dev" text={'Blog'} />

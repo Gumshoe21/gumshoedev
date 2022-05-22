@@ -3,7 +3,7 @@ import { Flex, useColorModeValue } from '@chakra-ui/react';
 const TechItem = (props) => {
   const { label, icon, color } = props;
   const Icon = icon;
-  const techItemBgColor = useColorModeValue('whiteAlpha.900', 'gray.700');
+  const techItemBgColor = useColorModeValue('White', 'gray.700');
   const shadowColor = useColorModeValue(
     '0.5px 4px 10px -5px #000',
     '0.5px 4px 10px -5px #fff'
@@ -19,7 +19,6 @@ const TechItem = (props) => {
       align="center"
       tranisition="0.3s all"
       borderRadius="20px"
-      border="1px solid #555"
       boxShadow={shadowColor}
       _hover={{
         transition: '0.3s all',
@@ -29,7 +28,7 @@ const TechItem = (props) => {
       }}
       p={10}
     >
-      <Flex>
+      <Flex mb={2}>
         <Icon color={color} size={60} />
       </Flex>
       <Flex>{label}</Flex>

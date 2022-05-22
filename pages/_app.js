@@ -1,5 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { extendTheme } from '@chakra-ui/react';
+import '@fontsource/montserrat/500.css';
 import theme from './../theme';
 
 function MyApp({ Component, pageProps }) {

@@ -7,6 +7,10 @@ import { mode } from '@chakra-ui/theme-tools';
 const theme = extendTheme({
   initialColorMode: 'light',
   useSystemColorMode: false,
+  fonts: {
+    heading: 'Montserrat, open-sans'
+  },
+
   styles: {
     global: (props) => ({
       body: {
@@ -22,6 +26,7 @@ const theme = extendTheme({
       }
     })
   },
+
   components: {
     Link: {
       baseStyle: {}

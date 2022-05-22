@@ -1,20 +1,17 @@
 import React, { Fragment } from 'react';
+import Head from 'next/head';
 import {
-  Container,
   Box,
   Flex,
   Heading,
   Link,
-  Button,
-  useColorMode,
   useColorModeValue,
-  Icon,
-  IconButton,
-  Tooltip,
   Grid,
-  GridItem
+  GridItem,
+  Text
 } from '@chakra-ui/react';
 import profilePic from '../public/gumshoe.png';
+import gumshoeDevImage from '../public/gumshoedev.jpg';
 import Image from '../components/Image';
 import Navbar from '../components/Navbar/Navbar';
 import {
@@ -27,16 +24,8 @@ import {
   FaReact,
   FaNodeJs
 } from 'react-icons/fa';
-import {
-  SiRedux,
-  SiJavascript,
-  SiMongodb,
-  SiChakraui,
-  SiExpress
-} from 'react-icons/si';
+import { SiJavascript, SiMongodb, SiExpress } from 'react-icons/si';
 
-import { DiHtml5, DiCss3, DiJavascript, DiMongodb, Di } from 'react-icons/di';
-import NextLink from 'next/link';
 import TechItem from './../components/Home/TechItem';
 import SocialButton from './../components/Home/SocialButton';
 
@@ -47,10 +36,23 @@ const Home = () => {
   const linkedInIconColor = '#0a66c2';
 
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
-  const section1BgColor = useColorModeValue('orange.50', 'gray.600');
+  const section1BgColor = useColorModeValue('orange.100', 'gray.600');
+
+  const profilePicShadow = useColorModeValue(
+    '0px 10px 10px -12px #000',
+    '0px 10px 10px -12px #fff'
+  );
 
   return (
     <Fragment>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Navbar />
       <Flex
         flexDirection="column"
@@ -62,18 +64,18 @@ const Home = () => {
         transitionDuration="200ms"
         px={4}
       >
-        <Box mb={2} borderRadius="50%">
+        <Box mb={8} borderRadius="50%">
           <Image
             borderRadius="50%"
             src={profilePic}
-            boxShadow="0px 10px 10px -8px #000"
+            boxShadow={profilePicShadow}
             transform="translateY(-10px)"
           />
         </Box>
-        <Heading mb={8} size="2xl">
-          Hi, I&apos;m Matthew
+        <Heading mb={8} size="3xl">
+          Hi&#44; my name is Matthew
         </Heading>
-        <Heading mb={4} size="md">
+        <Heading mb={2} size="md">
           I&apos;m a Full Stack Web Developer from Los Angeles, California.
         </Heading>
         <Heading mb={8} size="md">
@@ -86,7 +88,7 @@ const Home = () => {
           <SocialButton
             svg={FaEnvelope}
             color={envelopeIconColor}
-            href="mailto:matthew@gumshoe.dev"
+            href="mailto:msmilansky@gmail.com"
           />
           <SocialButton
             svg={FaTwitter}
@@ -112,13 +114,13 @@ const Home = () => {
         <Flex direction="column" alignItems="center" justifyContent="center">
           <Heading
             fontSize={{ md: 30, sm: 24 }}
-            letterSpacing="1rem"
+            letterSpacing=".5rem"
             textTransform="uppercase"
             textAlign="center"
             ml={4}
             mb={16}
           >
-            TECH STACK
+            Tech Stack
           </Heading>
           <Grid
             templateColumns="repeat(8,1fr)"
@@ -156,6 +158,65 @@ const Home = () => {
               <TechItem icon={FaNodeJs} label={'NodeJS'} color="#68A063" />
             </GridItem>
           </Grid>
+        </Flex>
+      </Flex>
+      <Flex p={20} align="center" justify="center" direction="column">
+        <Heading
+          fontSize={{ md: 30, sm: 24 }}
+          letterSpacing=".5rem"
+          textTransform="uppercase"
+          textAlign="center"
+          ml={4}
+          mb={16}
+        >
+          Projects
+        </Heading>
+        <Flex gap={16} align="center" direction={{ md: 'row', sm: 'column' }}>
+          <Flex
+            mb={8}
+            justify="center"
+            align="center"
+            gap={4}
+            direction="column"
+          >
+            <Image
+              loading="lazy"
+              src={gumshoeDevImage}
+              boxShadow={profilePicShadow}
+            />
+            <Heading>12 Hour Study</Heading>
+            <Text>Studying/productivity timer app.</Text>
+          </Flex>
+          <Flex
+            mb={8}
+            direction="column"
+            justify="center"
+            align="center"
+            gap={4}
+          >
+            <Image
+              loading="lazy"
+              src={gumshoeDevImage}
+              boxShadow={profilePicShadow}
+            />
+            <Heading>12 Hour Study</Heading>
+            <Text>Studying/productivity timer app.</Text>
+          </Flex>
+          <Flex
+            mb={8}
+            direction="column"
+            justify="center"
+            align="center"
+            gap={4}
+          >
+            <Image
+              loading="lazy"
+              src={gumshoeDevImage}
+              boxShadow={profilePicShadow}
+            />
+            <Heading>12 Hour Study</Heading>
+            <Text>Studying/productivity timer app.</Text>
+          </Flex>
         </Flex>
       </Flex>
     </Fragment>
