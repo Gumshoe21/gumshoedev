@@ -14,21 +14,13 @@ const TechItem = (props) => {
   );
   return (
     <Flex
-      bg={techItemBgColor}
       direction="column"
       align="center"
-      tranisition="0.3s all"
-      borderRadius="20px"
-      boxShadow={shadowColor}
-      _hover={{
-        transition: '0.3s all',
-
-        boxShadow: shadowColorHover,
-        translateZ: 40
-      }}
-      p={10}
+      py={8}
+      px={10}
+      mx={8}
     >
-      <Flex mb={2}>
+      <Flex>
         <Icon color={color} size={60} />
       </Flex>
       <Flex>{label}</Flex>

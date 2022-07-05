@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Head from 'next/head';
+import Marquee from 'react-fast-marquee';
 import {
   Box,
   Flex,
@@ -11,7 +12,9 @@ import {
   Text
 } from '@chakra-ui/react';
 import profilePic from '../public/gumshoe.png';
+import placeholder from '../public/placeholder400x400.png';
 import gumshoeDevImage from '../public/gumshoedev.jpg';
+
 import Image from '../components/Image';
 import Navbar from '../components/Navbar/Navbar';
 import {
@@ -24,7 +27,15 @@ import {
   FaReact,
   FaNodeJs
 } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiExpress } from 'react-icons/si';
+
+import {
+  SiJavascript,
+  SiMongodb,
+  SiExpress,
+  SiRubyonrails,
+  SiPostgresql,
+  SiPostman
+} from 'react-icons/si';
 
 import TechItem from './../components/Home/TechItem';
 import SocialButton from './../components/Home/SocialButton';
@@ -45,14 +56,6 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <Navbar />
       <Flex
         flexDirection="column"
@@ -72,10 +75,10 @@ const Home = () => {
             transform="translateY(-10px)"
           />
         </Box>
-        <Heading mb={8} size="3xl">
+        <Heading mb={8} fontSize="3.6rem">
           Hi&#44; my name is Matthew
         </Heading>
-        <Heading mb={2} size="md">
+        <Heading mb={2} fontSize="1.2rem">
           I&apos;m a Full Stack Web Developer from Los Angeles, California.
         </Heading>
         <Heading mb={8} size="md">
@@ -103,120 +106,99 @@ const Home = () => {
           <SocialButton svg={FaGithub} href="https://github.com/Gumshoe21" />
         </Flex>
       </Flex>
-
-      <Flex
-        bg={section1BgColor}
-        justifyContent="center"
-        transitionDuration="200ms"
-        py={20}
-        px={4}
-      >
-        <Flex direction="column" alignItems="center" justifyContent="center">
-          <Heading
-            fontSize={{ md: 30, sm: 24 }}
-            letterSpacing=".5rem"
-            textTransform="uppercase"
-            textAlign="center"
-            ml={4}
-            mb={16}
-          >
-            Tech Stack
-          </Heading>
-          <Grid
-            templateColumns="repeat(8,1fr)"
-            templateRows="repeat(2,1fr)"
-            gap={{ md: 10, sm: 4, base: 4 }}
-          >
-            <GridItem gridColumn="2 / 4" gridRow="1 / 2">
-              <TechItem icon={FaHtml5} label={'HTML5'} color="#E34C26" />
-            </GridItem>
-            <GridItem gridColumn="4 / 6" gridRow="1 / 2">
-              <TechItem icon={FaCss3Alt} label={'CSS3'} color="#264de4" />
-            </GridItem>
-
-            <GridItem gridColumn="6 / 8" gridRow="1 / 2">
-              <TechItem
-                icon={SiJavascript}
-                label={'JavaScript'}
-                color="#f7df1e"
-              />
-            </GridItem>
-
-            <GridItem gridColumn="1/3" gridRow="2/3">
-              <TechItem icon={SiMongodb} label={'MongoDB'} color="#4DB33D" />
-            </GridItem>
-
-            <GridItem gridColumn="3/5" gridRow="2/3">
-              <TechItem icon={SiExpress} label={'ExpressJS'} color="#828282" />
-            </GridItem>
-
-            <GridItem gridColumn="5/7" gridRow="2/3">
-              <TechItem icon={FaReact} label={'ReactJS'} color="#61DBFB" />
-            </GridItem>
-
-            <GridItem gridColumn="7/9" gridRow="2/3">
-              <TechItem icon={FaNodeJs} label={'NodeJS'} color="#68A063" />
-            </GridItem>
-          </Grid>
-        </Flex>
-      </Flex>
-      <Flex p={20} align="center" justify="center" direction="column">
-        <Heading
-          fontSize={{ md: 30, sm: 24 }}
-          letterSpacing=".5rem"
-          textTransform="uppercase"
-          textAlign="center"
-          ml={4}
-          mb={16}
+      <Flex direction="column">
+        <Flex
+          rowGap="3.2rem"
+          direction="column"
+          bg={heroBgColor}
+          transitionDuration="200ms"
+          h="100vh"
         >
-          Projects
-        </Heading>
-        <Flex gap={16} align="center" direction={{ md: 'row', sm: 'column' }}>
-          <Flex
-            mb={8}
-            justify="center"
-            align="center"
-            gap={4}
-            direction="column"
-          >
-            <Image
-              loading="lazy"
-              src={gumshoeDevImage}
-              boxShadow={profilePicShadow}
-            />
-            <Heading>12 Hour Study</Heading>
-            <Text>Studying/productivity timer app.</Text>
+          <Flex align="center" justify="center" direction="column">
+            <Heading
+              textTransform="uppercase"
+              textAlign="center"
+              fontSize="2.0rem"
+            >
+              About Me
+            </Heading>
           </Flex>
           <Flex
-            mb={8}
-            direction="column"
-            justify="center"
+            fontSize="1.2rem"
+            textAlign="center"
+            direction="row"
             align="center"
-            gap={4}
-          >
-            <Image
-              loading="lazy"
-              src={gumshoeDevImage}
-              boxShadow={profilePicShadow}
-            />
-            <Heading>12 Hour Study</Heading>
-            <Text>Studying/productivity timer app.</Text>
-          </Flex>
-          <Flex
-            mb={8}
-            direction="column"
             justify="center"
-            align="center"
-            gap={4}
+            gap="3.2rem"
           >
-            <Image
-              loading="lazy"
-              src={gumshoeDevImage}
-              boxShadow={profilePicShadow}
-            />
-            <Heading>12 Hour Study</Heading>
-            <Text>Studying/productivity timer app.</Text>
+            <Flex>
+              <Image src={placeholder} />
+            </Flex>
+            <Flex direction="column" w="50%" fontFamily="mono">
+              <Text>
+                I was born in Los Angeles, California and moved to Kfar Saba,
+                Israel with my family at a very young age (!כן, אני מדבר עברית).
+                I then moved back to the United States in late childhood, where
+                I’ve been living ever since. I’ve always had an affinity for
+                technology. When I was 4 years old, my parents purchased a
+                computer running Windows
+              </Text>
+              <br></br>
+              <Text>
+                I graduated from the University of California, Los Angeles
+                (UCLA) in 2014 with a Bachelor of Arts degree in English
+                Language and Literature. I’ve always been a big reader and enjoy
+                writing from time to time (check out my blog).
+              </Text>
+              <Text>
+                <br></br>
+                After graduating college, I started developing an interesting in
+                computer programming and began learning how to code websites and
+                web applications. And here I am now!
+              </Text>
+            </Flex>
           </Flex>
+        </Flex>
+
+        <Flex
+          rowGap="1.6rem"
+          direction="column"
+          bg={heroBgColor}
+          transitionDuration="200ms"
+        >
+          <Flex align="center" justify="center">
+            <Heading
+              textTransform="uppercase"
+              textAlign="center"
+              fontSize="2.0rem"
+            >
+              Some of the technologies I've worked with
+            </Heading>
+          </Flex>
+          <Box as={Marquee} speed="100" gradient="true" gradientWidth="200">
+            <TechItem icon={FaHtml5} label={'HTML5'} color="#E34C26" />
+            <TechItem icon={FaCss3Alt} label={'CSS3'} color="#264de4" />
+            <TechItem
+              icon={SiJavascript}
+              label={'JavaScript'}
+              color="#f7df1e"
+            />
+            <TechItem icon={FaNodeJs} label={'NodeJS'} color="#68A063" />
+            <TechItem icon={FaReact} label={'ReactJS'} color="#61DBFB" />
+            <TechItem icon={SiExpress} label={'ExpressJS'} color="#828282" />
+            <TechItem icon={SiMongodb} label={'MongoDB'} color="#4DB33D" />
+            <TechItem
+              icon={SiRubyonrails}
+              label={'Ruby on Rails'}
+              color="#CC0000"
+            />
+            <TechItem
+              icon={SiPostgresql}
+              label={'PostgreSQL'}
+              color="#326690"
+            />
+            <TechItem icon={SiPostman} label={'Postman'} color="#EF5B25" />
+          </Box>
         </Flex>
       </Flex>
     </Fragment>
