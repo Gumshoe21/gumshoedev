@@ -76,7 +76,7 @@ const Home = () => {
           />
         </Box>
         <Heading mb={8} fontSize="3.6rem">
-          Hi&#44; my name is Matthew
+          Hi&#44; I&apos;m Matthew
         </Heading>
         <Heading mb={2} fontSize="1.2rem">
           I&apos;m a Full Stack Web Developer from Los Angeles, California.
@@ -108,11 +108,10 @@ const Home = () => {
       </Flex>
       <Flex direction="column">
         <Flex
-          rowGap="3.2rem"
+          rowGap="4.8rem"
           direction="column"
           bg={heroBgColor}
           transitionDuration="200ms"
-          h="100vh"
         >
           <Flex align="center" justify="center" direction="column">
             <Heading
@@ -126,7 +125,7 @@ const Home = () => {
           <Flex
             fontSize="1.2rem"
             textAlign="center"
-            direction="row"
+            direction={{ md: 'row', base: 'column' }}
             align="center"
             justify="center"
             gap="3.2rem"
@@ -134,14 +133,18 @@ const Home = () => {
             <Flex>
               <Image src={placeholder} />
             </Flex>
-            <Flex direction="column" w="50%" fontFamily="mono">
+            <Flex
+              direction="column"
+              w={{ md: '50vw', base: '90vw' }}
+              fontFamily="mono"
+            >
               <Text>
                 I was born in Los Angeles, California and moved to Kfar Saba,
                 Israel with my family at a very young age (!כן, אני מדבר עברית).
                 I then moved back to the United States in late childhood, where
                 I’ve been living ever since. I’ve always had an affinity for
                 technology. When I was 4 years old, my parents purchased a
-                computer running Windows
+                Windows 3.1 PC, and I was immediately hooked.
               </Text>
               <br></br>
               <Text>
@@ -152,54 +155,46 @@ const Home = () => {
               </Text>
               <Text>
                 <br></br>
-                After graduating college, I started developing an interesting in
+                After graduating college, I started developing an interest in
                 computer programming and began learning how to code websites and
                 web applications. And here I am now!
               </Text>
             </Flex>
           </Flex>
         </Flex>
+      </Flex>
 
-        <Flex
-          rowGap="1.6rem"
-          direction="column"
-          bg={heroBgColor}
-          transitionDuration="200ms"
-        >
-          <Flex align="center" justify="center">
-            <Heading
-              textTransform="uppercase"
-              textAlign="center"
-              fontSize="2.0rem"
-            >
-              Some of the technologies I've worked with
-            </Heading>
-          </Flex>
-          <Box as={Marquee} speed="100" gradient="true" gradientWidth="200">
-            <TechItem icon={FaHtml5} label={'HTML5'} color="#E34C26" />
-            <TechItem icon={FaCss3Alt} label={'CSS3'} color="#264de4" />
-            <TechItem
-              icon={SiJavascript}
-              label={'JavaScript'}
-              color="#f7df1e"
-            />
-            <TechItem icon={FaNodeJs} label={'NodeJS'} color="#68A063" />
-            <TechItem icon={FaReact} label={'ReactJS'} color="#61DBFB" />
-            <TechItem icon={SiExpress} label={'ExpressJS'} color="#828282" />
-            <TechItem icon={SiMongodb} label={'MongoDB'} color="#4DB33D" />
-            <TechItem
-              icon={SiRubyonrails}
-              label={'Ruby on Rails'}
-              color="#CC0000"
-            />
-            <TechItem
-              icon={SiPostgresql}
-              label={'PostgreSQL'}
-              color="#326690"
-            />
-            <TechItem icon={SiPostman} label={'Postman'} color="#EF5B25" />
-          </Box>
+      <Flex
+        rowGap="1.6rem"
+        direction="column"
+        bg={heroBgColor}
+        transitionDuration="200ms"
+      >
+        <Flex align="center" justify="center">
+          <Heading
+            textTransform="uppercase"
+            textAlign="center"
+            fontSize="2.0rem"
+          >
+            Some of the technologies I've worked with
+          </Heading>
         </Flex>
+        <Box as={Marquee} speed="100" gradient="true" gradientWidth="200">
+          <TechItem icon={FaHtml5} label={'HTML5'} color="#E34C26" />
+          <TechItem icon={FaCss3Alt} label={'CSS3'} color="#264de4" />
+          <TechItem icon={SiJavascript} label={'JavaScript'} color="#f7df1e" />
+          <TechItem icon={FaNodeJs} label={'NodeJS'} color="#68A063" />
+          <TechItem icon={FaReact} label={'ReactJS'} color="#61DBFB" />
+          <TechItem icon={SiExpress} label={'ExpressJS'} color="#828282" />
+          <TechItem icon={SiMongodb} label={'MongoDB'} color="#4DB33D" />
+          <TechItem
+            icon={SiRubyonrails}
+            label={'Ruby on Rails'}
+            color="#CC0000"
+          />
+          <TechItem icon={SiPostgresql} label={'PostgreSQL'} color="#326690" />
+          <TechItem icon={SiPostman} label={'Postman'} color="#EF5B25" />
+        </Box>
       </Flex>
     </Fragment>
   );
