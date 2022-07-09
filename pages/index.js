@@ -73,13 +73,14 @@ const Home = () => {
             src={profilePic}
             boxShadow={profilePicShadow}
             transform="translateY(-10px)"
+            alt="Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev"
           />
         </Box>
         <Heading mb={8} fontSize="3.6rem">
           Hi&#44; I&apos;m Matthew
         </Heading>
         <Heading mb={2} fontSize="1.2rem">
-          I&apos;m a Full Stack Web Developer from Los Angeles, California.
+          I&apos;m a Full Stack Web Developer from Los Angeles&#44; California.
         </Heading>
         <Heading mb={8} size="md">
           I also like to write &mdash; check out{' '}
@@ -112,6 +113,7 @@ const Home = () => {
           direction="column"
           bg={heroBgColor}
           transitionDuration="200ms"
+          mb="6.4rem"
         >
           <Flex align="center" justify="center" direction="column">
             <Heading
@@ -139,25 +141,26 @@ const Home = () => {
               fontFamily="mono"
             >
               <Text>
-                I was born in Los Angeles, California and moved to Kfar Saba,
-                Israel with my family at a very young age (!כן, אני מדבר עברית).
-                I then moved back to the United States in late childhood, where
-                I’ve been living ever since. I’ve always had an affinity for
-                technology. When I was 4 years old, my parents purchased a
-                Windows 3.1 PC, and I was immediately hooked.
+                I was born in Los Angeles&#44; California and moved to Kfar
+                Saba&#44; Israel with my family at a very young age (!כן, אני
+                מדבר עברית). I then moved back to the United States in late
+                childhood&#44; where I&apos;ve been living ever since. I&apos;ve
+                always had an affinity for technology. When I was 4 years
+                old&#44; my parents purchased a Windows 3.1 PC&#44; and I was
+                immediately hooked.
               </Text>
               <br></br>
               <Text>
-                I graduated from the University of California, Los Angeles
+                I graduated from the University of California&#44; Los Angeles
                 (UCLA) in 2014 with a Bachelor of Arts degree in English
-                Language and Literature. I’ve always been a big reader and enjoy
-                writing from time to time (check out my blog).
+                Language and Literature. I&apos;ve always been a big reader and
+                enjoy writing from time to time (check out my blog).
               </Text>
               <Text>
                 <br></br>
-                After graduating college, I started developing an interest in
-                computer programming and began learning how to code websites and
-                web applications. And here I am now!
+                After graduating college&#44; I started developing an interest
+                in computer programming and began learning how to code websites
+                and web applications. And here I am now!
               </Text>
             </Flex>
           </Flex>
@@ -176,7 +179,7 @@ const Home = () => {
             textAlign="center"
             fontSize="2.0rem"
           >
-            Some of the technologies I've worked with
+            Some of the technologies I&apos;ve worked with
           </Heading>
         </Flex>
         <Box as={Marquee} speed="100" gradient="true" gradientWidth="200">
