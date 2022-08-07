@@ -1,33 +1,10 @@
 import React, { Fragment } from 'react';
-import Head from 'next/head';
 import Marquee from 'react-fast-marquee';
-import {
-  Box,
-  Flex,
-  Heading,
-  Link,
-  useColorModeValue,
-  Grid,
-  GridItem,
-  Text
-} from '@chakra-ui/react';
-import profilePic from '../public/gumshoe.png';
-import placeholder from '../public/placeholder400x400.png';
-import gumshoeDevImage from '../public/gumshoedev.jpg';
-
+import { Box, Flex, Heading, useColorModeValue, Text } from '@chakra-ui/react';
 import Image from '../components/Image';
-import Navbar from '../components/Navbar/Navbar';
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaNodeJs
-} from 'react-icons/fa';
-
+import placeholder from '../public/placeholder400x400.png';
+import Hero from './../components/Home/Sections/Hero';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
 import {
   SiJavascript,
   SiMongodb,
@@ -37,76 +14,15 @@ import {
   SiPostman
 } from 'react-icons/si';
 
+import Navbar from '../components/Navbar/Navbar';
 import TechItem from './../components/Home/TechItem';
-import SocialButton from './../components/Home/SocialButton';
 
 const Home = () => {
-  const blogLinkColor = useColorModeValue('blue.500', 'purple.300');
-  const envelopeIconColor = blogLinkColor;
-  const twitterIconColor = '#1DA1F2';
-  const linkedInIconColor = '#0a66c2';
-
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
-  const section1BgColor = useColorModeValue('orange.100', 'gray.600');
-
-  const profilePicShadow = useColorModeValue(
-    '0px 10px 10px -12px #000',
-    '0px 10px 10px -12px #fff'
-  );
-
   return (
     <Fragment>
       <Navbar />
-      <Flex
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        height="100vh"
-        textAlign="center"
-        bg={heroBgColor}
-        transitionDuration="200ms"
-        px={4}
-      >
-        <Box mb={8} borderRadius="50%">
-          <Image
-            borderRadius="50%"
-            src={profilePic}
-            boxShadow={profilePicShadow}
-            transform="translateY(-10px)"
-            alt="Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev"
-          />
-        </Box>
-        <Heading mb={8} fontSize="3.6rem">
-          Hi&#44; I&apos;m Matthew
-        </Heading>
-        <Heading mb={2} fontSize="1.2rem">
-          I&apos;m a Full Stack Web Developer from Los Angeles&#44; California.
-        </Heading>
-        <Heading mb={8} size="md">
-          I also like to write &mdash; check out{' '}
-          <Link href="https://blog.gumshoe.dev" color={blogLinkColor}>
-            my ramblings.
-          </Link>
-        </Heading>
-        <Flex columnGap={2}>
-          <SocialButton
-            svg={FaEnvelope}
-            color={envelopeIconColor}
-            href="mailto:msmilansky@gmail.com"
-          />
-          <SocialButton
-            svg={FaTwitter}
-            color={twitterIconColor}
-            href="https://twitter.com/Gumshoe21"
-          />
-          <SocialButton
-            svg={FaLinkedin}
-            color={linkedInIconColor}
-            href="https://linkedin.com/in/matthew-smilansky"
-          />
-          <SocialButton svg={FaGithub} href="https://github.com/Gumshoe21" />
-        </Flex>
-      </Flex>
+      <Hero />
       <Flex direction="column">
         <Flex
           rowGap="4.8rem"
