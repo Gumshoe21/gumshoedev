@@ -29,26 +29,26 @@ const OBSOLESCNCE = () => {
 					would be.
 				</ParagraphLeft>
 				<ParagraphCenter>
-					I'm not currently in the market, but eventually I will be.
+					I&apos;m not currently in the market, but eventually I will be.
 				</ParagraphCenter>
 				<ParagraphRight>Eventually everyone will be...</ParagraphRight>
 
 				<ParagraphCenter>
-					The conclusion made is that I really don't understand the difference
-					between a $400 card and a $500 card with the same model name but
-					slightly different specs.
+					The conclusion made is that I really don&apos;t understand the
+					difference between a $400 card and a $500 card with the same model
+					name but slightly different specs.
 				</ParagraphCenter>
 				<ParagraphLeft>
-					More imprtantly, I don't understand why I would need the more
+					More imprtantly, I don&apos;t understand why I would need the more
 					expensive option over the less expensive. Is there $100 worth of
-					graphics power I'm missing out on if I opt lower?
+					graphics power I&apos;m missing out on if I opt lower?
 				</ParagraphLeft>
 
 				<ParagraphCenter>Would my needs even require it?</ParagraphCenter>
 				<ParagraphRight>
-					If I'm buying now, I'd want to get a head start on the race against
-					obsolescence, right? Why not 7 years of assured compatiblity instead
-					of just 5 or 6?
+					If I&apos;m buying now, I&apos;d want to get a head start on the race
+					against obsolescence, right? Why not 7 years of assured compatiblity
+					instead of just 5 or 6?
 				</ParagraphRight>
 				<ParagraphLeft>
 					Some purchasing decisions are certainly more involved than others, and
