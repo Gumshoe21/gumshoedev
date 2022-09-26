@@ -1,10 +1,10 @@
 import { Heading, Box, Flex } from '@chakra-ui/react';
-import ParagraphLeft from './../../components/Gumfiles/ParagraphLeft';
-import ParagraphRight from './../../components/Gumfiles/ParagraphRight';
-import ParagraphCenter from './../../components/Gumfiles/ParagraphCenter';
-import Title from './../../components/Gumfiles/Title';
+import ParagraphLeft from '../../components/Gumfiles/ParagraphLeft';
+import ParagraphRight from '../../components/Gumfiles/ParagraphRight';
+import ParagraphCenter from '../../components/Gumfiles/ParagraphCenter';
+import Title from '../../components/Gumfiles/Title';
 
-import Date from './../../components/Gumfiles/Date';
+import Date from '../../components/Gumfiles/Date';
 // SPACING
 // 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
