@@ -10,7 +10,7 @@ import Date from '../../components/Gumfiles/Date';
 
 // FONT SIZES
 // 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-const OBSOLESCNCE = () => {
+const OBSOLESCENCE = () => {
 	return (
 		<Flex direction="column" align="center" justify="center">
 			<Title>Obsolescence</Title>
@@ -59,4 +59,4 @@ const OBSOLESCNCE = () => {
 		</Flex>
 	);
 };
-export default OBSOLESCNCE;
+export default OBSOLESCENCE;
