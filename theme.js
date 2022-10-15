@@ -8,31 +8,23 @@ const theme = extendTheme({
 	initialColorMode: 'light',
 	useSystemColorMode: false,
 	fonts: {
-		heading: 'Montserrat, open-sans',
+		heading: 'Poly, open-sans',
 	},
 
 	styles: {
 		global: props => ({
-			html: {
-				fontSize: '62.5%',
-			},
 			body: {
 				bg: mode('whiteAlpha.900', 'gray.800')(props),
 				color: mode('gray.800', 'whiteAlpha.900')(props),
-				padding: '0',
-				margin: '0',
-				boxSizing: 'border-box',
-			},
-			'#__next': {
-				display: 'flex',
-				flexDirection: 'column',
 			},
 		}),
 	},
 
 	components: {
 		Link: {
-			baseStyle: {},
+			baseStyle: props => ({
+				color: mode('blue.500', 'purple.500')(props),
+			}),
 		},
 		Container: {
 			baseStyle: {

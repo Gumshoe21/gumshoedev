@@ -1,10 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import '@fontsource/montserrat/500.css';
+import '@fontsource/poly';
+import '@fontsource/montserrat';
+
 import theme from '../theme';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<ChakraProvider theme={theme}>
+		<ChakraProvider resetCSS theme={theme}>
 			<Component {...pageProps} />
 		</ChakraProvider>
 	);

@@ -1,4 +1,4 @@
-import { IconButton } from '@chakra-ui/react';
+import { IconButton, useColorModeValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 const SocialButton = props => {
@@ -15,8 +15,7 @@ const SocialButton = props => {
 					transform: 'translateY(-4px)',
 				}}
 				_active={{ cursor: 'pointer', bg: 'none' }}
-				color={color}
-				aria-label={''}
+				color={useColorModeValue('purple.700', 'blue.300')}
 			/>
 		</NextLink>
 	);
