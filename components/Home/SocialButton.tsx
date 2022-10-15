@@ -16,6 +16,7 @@ const SocialButton = props => {
 				}}
 				_active={{ cursor: 'pointer', bg: 'none' }}
 				color={useColorModeValue('purple.700', 'blue.300')}
+				aria-label={''}
 			/>
 		</NextLink>
 	);
