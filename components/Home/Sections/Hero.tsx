@@ -30,7 +30,6 @@ const Hero = () => {
       justify='center'
       flexDirection='column'
       height='calc(100vh - 72px)'
-      bg={heroBgColor}
       transitionDuration='200ms'
       pt={40}
       pb={20}
@@ -64,7 +63,7 @@ const Hero = () => {
         right='-100%'
         sx={{
           animation: `1s ${fadeInRight} forwards`,
-          'animation-delay': '200ms',
+          'animationDelay': '200ms',
         }}
       >
         Matthew Smilansky
