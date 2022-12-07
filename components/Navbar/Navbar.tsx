@@ -39,8 +39,8 @@ const Navbar = () => {
   const navbarBgColor = useColorModeValue('#ffffff', 'gray.800')
 
   return (
-    <Box zIndex='1'>
-      <Flex opacity='100%' bg={navbarBgColor} py={4} alignItems='center' justify={{ md: 'center', sm: 'center' }} mr={{ sm: 4 }} transitionDuration='200ms'>
+    <Box zIndex='1' position='fixed' css={{ backdropFilter: 'blur(5px)' }} w='100%'>
+      <Flex opacity='100%' py={4} alignItems='center' justify={{ md: 'center', sm: 'center' }} transitionDuration='200ms'>
         <Flex w='100%' justify='center' align='center' flexDirection='row' columnGap={10}>
           <Tooltip placement='bottom' label='Under Construction!' zIndex={2}>
             <Text fontWeight='bold'>Projects</Text>
