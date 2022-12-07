@@ -1,32 +1,25 @@
-import React, { Fragment } from 'react';
-import { Box, Flex } from '@chakra-ui/react';
-import Navbar from '../components/Navbar/Navbar';
-import Hero from '../components/Home/Sections/Hero';
-import AboutMe from '../components/Home/Sections/AboutMe';
-import Technologies from '../components/Home/Sections/Technologies';
-import Projects from '../components/Home/Sections/Projects';
+import React from 'react'
+import { Box, Flex } from '@chakra-ui/react'
+import Navbar from '@navbar/Navbar'
+import Hero from '@home/Sections/Hero'
+import AboutMe from '@home/Sections/AboutMe'
+import Technologies from '@home/Sections/Technologies'
+import Projects from '@home/Sections/Projects'
 
 const Home = () => {
-	return (
-		<Fragment>
-			<Navbar />
-			<Box>
-				<Flex
-					direction="column"
-					align="center"
-					justify="center"
-					maxW="6xl"
-					mx="auto"
-					px="6"
-				>
-					<Hero />
-					<AboutMe />
-					<Technologies />
-					<Projects />
-				</Flex>
-			</Box>
-		</Fragment>
-	);
-};
+  return (
+    <>
+      <Navbar />
+      <Box>
+        <Flex direction='column' align='center' justify='center' maxW='6xl' mx='auto' px='6'>
+          <Hero />
+          <AboutMe />
+          <Technologies />
+          <Projects />
+        </Flex>
+      </Box>
+    </>
+  )
+}
 
-export default Home;
+export default Home

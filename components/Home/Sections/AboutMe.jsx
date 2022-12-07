@@ -1,11 +1,12 @@
 import { Link, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
-import Image from '../../../components/Image';
-import placeholder from '../../../public/placeholder400x400.png';
+import Image from '@components/Image';
+import placeholder from '@public/placeholder400x400.png';
 import NextLink from 'next/link';
 
 const AboutMe = () => {
 	const blogLinkColor = useColorModeValue('blue.500', 'purple.300');
 	const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
+
 	return (
 		<Flex direction="column" py={20}>
 			<Flex
