@@ -1,9 +1,9 @@
 import React from 'react'
 import { Box, Flex } from '@chakra-ui/react'
 import Navbar from '@navbar/Navbar'
-import Hero from '@home/Sections/Hero'
+import Hero from '@home/Sections/Hero/Hero'
 import AboutMe from '@home/Sections/AboutMe'
-import Technologies from '@home/Sections/Technologies'
+import Technologies from '@home/Sections/Technologies/Technologies'
 import Projects from '@home/Sections/Projects/Projects'
 
 const Home = () => {
