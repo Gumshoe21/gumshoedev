@@ -18,12 +18,11 @@
     "paths": {
       "@public/*": ["./public/*"],
       "@components/*": ["./components/*"],
-"@home/*": ["./components/Home/*"],
+      "@home/*": ["./components/Home/*"],
       "@projects/*": ["./components/Home/Sections/Projects/*"],
       "@navbar/*": ["./components/Navbar/*"],
-
-      "@gumfiles/*": ["./components/Gumfiles/*"],
-          }
+      "@gumfiles/*": ["./components/Gumfiles/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

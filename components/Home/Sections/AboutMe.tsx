@@ -2,6 +2,7 @@ import { Link, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react'
 import Image from '@components/Image'
 import placeholder from '@public/placeholder400x400.png'
 import NextLink from 'next/link'
+import SectionHeading from '@home/Sections/SectionHeading'
 
 const AboutMe = () => {
   const blogLinkColor = useColorModeValue('blue.500', 'purple.300')
@@ -9,17 +10,15 @@ const AboutMe = () => {
 
   return (
     <Flex direction='column' py={20}>
-      <Flex direction='column' rowGap='4.8rem' bg={heroBgColor} transitionDuration='200ms'>
+      <Flex direction='column' gap={10} bg={heroBgColor} transitionDuration='200ms'>
         <Flex direction='column' align='center' justify='center'>
-          <Heading textAlign='center' fontSize='2.0rem' letterSpacing='.3rem' textTransform='uppercase'>
-            About Me
-          </Heading>
+          <SectionHeading>About Me</SectionHeading>
         </Flex>
-        <Flex fontSize='md' direction={{ md: 'row', base: 'column' }} align='center' justify='space-between' gap='20'>
+        <Flex fontSize='md' direction={{ md: 'row', base: 'column' }} align='center' justify='space-between' gap={{ base: 8, md: 20 }}>
           <Flex flexBasis='33.3%'>
             <Image src={placeholder} alt='placeholder photo, 400x400px' />
           </Flex>
-          <Flex gap={4} flexBasis='66.6%' direction='column' fontWeight='600' fontFamily='Montserrat'>
+          <Flex gap={4} flexBasis='66.6%' direction='column' fontSize='md'>
             <Text>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I was born in Los Angeles&#44; California and moved to Israel with my family at a very young age
               (!כן, אני מדבר עברית). I then moved back to the United States in late childhood&#44; where I&apos;ve been living ever since.

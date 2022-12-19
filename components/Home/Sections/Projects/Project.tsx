@@ -8,28 +8,25 @@ const Project = (props) => {
   const { type, description, title, children, linkText, ...rest } = props
 
   return (
-    <Flex
-      direction={{ base: 'column-reverse', md: `${type === 'even' ? 'row-reverse' : 'row'}` }}
-      justify='center'
-      align='center'
-      gap={{ base: 8, md: 4 }}
-    >
+    <Flex direction={{ base: 'column-reverse', md: `${type === 'even' ? 'row-reverse' : 'row'}` }} justify='center' align='center' gap={{ base: 8, md: 4 }}>
       {/* Project description */}
-      <Flex direction='column' justify='space-around' flexBasis='66.6%'>
-        <Flex direction='column' gap='1'>
-          <Heading fontSize='2xl' mb='2' alignSelf={{ base: 'center', md: `${type === 'even' ? 'end' : 'start'}` }}>
+      <Flex direction='column' justify='space-around' flexBasis='66.6%' gap='8'>
+        <Flex direction='column'>
+          {/* Title */}
+          <Heading fontSize='3xl' mb={6} alignSelf={{ base: 'center', md: `${type === 'even' ? 'end' : 'start'}` }}>
             {title}
           </Heading>
-          <Flex direction='column' fontSize='md' gap='2'>
+          {/* Children (Paragraph and build with) */}
+          <Flex direction='column' fontWeight='normal' fontSize='md' gap='4' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
             {props.children}
           </Flex>
         </Flex>
-        <Flex fontSize='xl' fontWeight='bold' direction='column' align='center'>
+        {/* Live Demo link */}
+        <Flex fontSize='xl' fontWeight='bold' direction='column' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
           <ChakraLink {...rest}>{linkText}</ChakraLink>
         </Flex>
       </Flex>
       {/* Project image */}
-
       <Flex borderColor='whiteAlpha.800' borderWidth={1} borderStyle='solid' justify='space-between' align='space-between'>
         <Image src={placeholder} alt='' />
       </Flex>

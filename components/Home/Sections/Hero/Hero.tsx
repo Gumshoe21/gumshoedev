@@ -69,7 +69,7 @@ const Hero = () => {
         Matthew Smilansky
       </Heading>
       <Heading
-        fontSize={{ base: 'lg', md: '2xl' }}
+        fontSize={{ base: 'md', md: '2xl' }}
         fontFamily='Montserrat'
         fontWeight='600'
         position='relative'

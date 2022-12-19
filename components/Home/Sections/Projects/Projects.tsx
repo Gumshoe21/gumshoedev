@@ -3,19 +3,18 @@ import NextLink from 'next/link'
 import placeholder from '@public/placeholder300x250.png'
 import Image from '@components/Image'
 import Project from '@projects/Project'
+import SectionHeading from '@home/Sections/SectionHeading'
 
 const Projects = () => {
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
   return (
     <Flex direction='column' py={20}>
-      <Flex direction='column' rowGap='4.8rem' bg={heroBgColor} transitionDuration='200ms'>
+      <Flex direction='column' gap={10} bg={heroBgColor} transitionDuration='200ms'>
         <Flex direction='column' align='center' justify='center'>
-          <Heading textAlign='center' fontSize='2.0rem' letterSpacing='.3rem' textTransform='uppercase'>
-            My Work
-          </Heading>
+          <SectionHeading>Projects</SectionHeading>
         </Flex>
         {/* Begin projects */}
-        <Flex direction='column' align='center' justify='center' gap='4.8rem' fontFamily='Courier New'>
+        <Flex direction='column' align='center' justify='center' gap='4.8rem'>
           {/* Project 1 */}
           <Project title='12 Hour Study' href='#' linkText='Live Demo' type='odd'>
             <Text>
@@ -30,17 +29,13 @@ const Projects = () => {
           </Project>
           {/* End Project 1 */}
           {/* Project 2 */}
-          <Project title='LetterGo' href='#' linkText='Live Demo' type='even'>
-            <Text fontSize='md' textAlign='right'>
-              A{' '}
-              <em>
-                <strong>word game</strong>
-              </em>{' '}
-              that challenges users form as many heterograms as possible before running out of time. Allows for OAuth 2 login via Google and GitHub. Features a
-              leaderboard listing the highest scores.
+          <Project title='LetterGo' href='#' linkText='Live Demo' type={'even'}>
+            <Text>
+              A <strong>word game</strong> that challenges users form as many heterograms as possible before running out of time. Allows for OAuth 2 login via
+              Google and GitHub. Features a leaderboard listing the highest scores.
             </Text>
-            <Text textAlign='right' fontSize='md'>
-              Built with Next.js, Prisma, PostgreSQL, and Tailwind CSS/UI.
+            <Text fontWeight='500' textAlign={{ base: 'center', md: 'right' }} fontSize='md'>
+              <i>Built with Next.js, Prisma, PostgreSQL, and Tailwind CSS/UI.</i>
             </Text>
           </Project>
           {/* End project 2 */}
@@ -50,7 +45,7 @@ const Projects = () => {
             <Text>
               A{' '}
               <em>
-                <strong>website for a fictional coffee shop.</strong>
+                <strong>mock website for a fictional coffee shop.</strong>
               </em>{' '}
               Features an online ordering system with e-commerce components.
             </Text>
