@@ -5,6 +5,7 @@ import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
 
 import SectionHeading from '@home/Sections/SectionHeading'
 import { SiJavascript, SiMongodb, SiExpress, SiRubyonrails, SiPostgresql, SiPostman } from 'react-icons/si'
+
 const Technologies = () => {
   return (
     <Flex direction='column' py={20} w='100vw'>

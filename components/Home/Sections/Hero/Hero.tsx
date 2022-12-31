@@ -10,20 +10,10 @@ const Hero = () => {
   const profilePicShadow = useColorModeValue('0px 10px 10px -12px #000', '0px 10px 10px -12px #fff')
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
 
-  const fadeInLeft = keyframes`
-		100% { left:0; }
-  `
-  const fadeInRight = keyframes`
-		100% { right:0; }
-  `
+  const fadeIn = (dir: string): string => {
+    return keyframes`100% { ${dir}:0; }`
+  }
 
-  const fadeInBottom = keyframes`
-		100% { bottom:0; }
-  `
-
-  const fadeInTop = keyframes`
-	  100% { top:0; }
-   `
   return (
     <Flex
       align='center'
@@ -42,7 +32,7 @@ const Hero = () => {
         position='relative'
         top='-100%'
         sx={{
-          animation: `1000ms ${fadeInTop} forwards`,
+          animation: `1000ms ${fadeIn('top')} forwards`,
         }}
       >
         <Image
@@ -62,7 +52,7 @@ const Hero = () => {
         position='relative'
         right='-100%'
         sx={{
-          animation: `1s ${fadeInRight} forwards`,
+          animation: `1000ms ${fadeIn('right')} forwards`,
           animationDelay: '200ms',
         }}
       >
@@ -75,7 +65,7 @@ const Hero = () => {
         position='relative'
         left='-100%'
         sx={{
-          animation: `1s ${fadeInLeft} forwards`,
+          animation: `1000ms ${fadeIn('left')} forwards`,
           'animation-delay': '200ms',
         }}
       >
@@ -87,13 +77,13 @@ const Hero = () => {
         bottom='-100%'
         position='relative'
         sx={{
-          animation: `800ms ${fadeInBottom} forwards`,
+          animation: `1s ${fadeIn('bottom')} forwards`,
         }}
       >
-        <SocialButton svg={FaEnvelope} href='mailto:msmilansky@gmail.com' />
-        <SocialButton svg={FaTwitter} href='https://twitter.com/Gumshoe21' />
-        <SocialButton svg={FaLinkedin} href='https://linkedin.com/in/matthew-smilansky' />
-        <SocialButton svg={FaGithub} href='https://github.com/Gumshoe21' />
+        <SocialButton icon={<FaEnvelope size={26} />} href='mailto:msmilansky@gmail.com' />
+        <SocialButton icon={<FaTwitter size={26} />} href='https://twitter.com/Gumshoe21' />
+        <SocialButton icon={<FaLinkedin size={26} />} href='https://linkedin.com/in/matthew-smilansky' />
+        <SocialButton icon={<FaGithub size={26} />} href='https://github.com/Gumshoe21' />
       </Flex>
     </Flex>
   )

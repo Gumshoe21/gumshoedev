@@ -4,8 +4,16 @@ import placeholder from '@public/app-lettergo.png'
 import Image from '@components/Image'
 import NextImage from 'next/image'
 
-const Project = (props) => {
-  const { type, description, title, children, linkText, ...rest } = props
+interface IProject {
+  type: string
+  href: string
+  title: string
+  linkText: string
+  children: JSX.Element[]
+}
+
+const Project = (props: IProject) => {
+  const { type, title, children, linkText, ...rest } = props
 
   return (
     <Flex direction={{ base: 'column-reverse', md: `${type === 'even' ? 'row-reverse' : 'row'}` }} justify='center' align='center' gap={{ base: 8, md: 4 }}>
@@ -18,7 +26,7 @@ const Project = (props) => {
           </Heading>
           {/* Children (Paragraph and build with) */}
           <Flex direction='column' fontWeight='normal' fontSize='md' gap='4' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
-            {props.children}
+            {children}
           </Flex>
         </Flex>
         {/* Live Demo link */}

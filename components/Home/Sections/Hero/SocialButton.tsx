@@ -1,13 +1,22 @@
+import { ReactElement, ReactNode } from 'react'
 import { IconButton, useColorModeValue } from '@chakra-ui/react'
+import { IconLookup, IconName, IconDefinition, findIconDefinition } from '@fortawesome/fontawesome-svg-core'
 import NextLink from 'next/link'
 
-const SocialButton = (props) => {
-  const { color, href, svg } = props
-  const Svg = svg
+interface ISocialButton {
+  href: string
+  icon: React.ReactElement
+}
+
+const SocialButton = (props: ISocialButton) => {
+  console.log(useColorModeValue('purple.700', 'blue.300'))
+
+  const { icon, href } = props
+
   return (
     <NextLink href={href} passHref>
       <IconButton
-        icon={<Svg size={26} />}
+        icon={icon}
         bg='none'
         _hover={{
           cursor: 'pointer',

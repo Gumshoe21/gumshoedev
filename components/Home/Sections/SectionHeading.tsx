@@ -1,6 +1,10 @@
 import { Heading } from '@chakra-ui/react'
 
-const SectionHeading = ({ children }) => {
+interface ISectionHeading {
+  children: string
+}
+
+const SectionHeading = ({ children }: ISectionHeading) => {
   return (
     <Heading textAlign='center' fontSize='2.0rem' letterSpacing='.3rem' textTransform='uppercase'>
       {children}
@@ -8,4 +12,4 @@ const SectionHeading = ({ children }) => {
   )
 }
 
-export default SectionHeading;
+export default SectionHeading

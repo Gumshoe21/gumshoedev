@@ -1,7 +1,13 @@
+import { ReactElement } from 'react'
 import { Flex, useColorModeValue } from '@chakra-ui/react'
-
+interface ITechItem {
+  label: string
+  icon: ReactElement
+  color: string
+}
 const TechItem = (props) => {
   const { label, icon, color } = props
+
   const Icon = icon
   const techItemBgColor = useColorModeValue('White', 'gray.700')
   const shadowColor = useColorModeValue('0.5px 4px 10px -5px #000', '0.5px 4px 10px -5px #fff')

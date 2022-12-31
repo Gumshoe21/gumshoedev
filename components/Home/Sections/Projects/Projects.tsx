@@ -7,6 +7,7 @@ import SectionHeading from '@home/Sections/SectionHeading'
 
 const Projects = () => {
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
+
   return (
     <Flex direction='column' py={20}>
       <Flex direction='column' gap={10} bg={heroBgColor} transitionDuration='200ms'>
@@ -29,7 +30,7 @@ const Projects = () => {
           </Project>
           {/* End Project 1 */}
           {/* Project 2 */}
-          <Project title='LetterGo' href='#' linkText='Live Demo' type={'even'}>
+          <Project title='LetterGo' href='#' linkText='Live Demo' type='even'>
             <Text>
               A <strong>word game</strong> that challenges users form as many heterograms as possible before running out of time. Allows for OAuth 2 login via
               Google and GitHub. Features a leaderboard listing the highest scores.
