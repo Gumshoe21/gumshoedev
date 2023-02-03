@@ -69,7 +69,7 @@ const Hero = () => {
           'animation-delay': '200ms',
         }}
       >
-        Software Developer
+        Front-End Web Developer
       </Heading>
       <Flex
         columnGap={2}

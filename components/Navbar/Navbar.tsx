@@ -31,15 +31,13 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
 
-  const iconWidthAndHeight = '8'
   const iconBackgroundColor = useColorModeValue('purple.600', 'orange.200')
 
   const iconBackgroundHover = useColorModeValue('purple.800', 'orange.300')
   const iconColor = useColorModeValue('whiteAlpha.900', 'gray.900')
-  const navbarBgColor = useColorModeValue('#ffffff', 'gray.800')
 
   return (
-    <Box zIndex='1' position='fixed' css={{ backdropFilter: 'blur(5px)' }} w='100%'>
+    <Box zIndex='2' position='fixed' css={{ backdropFilter: 'blur(5px)' }} w='100%'>
       <Flex opacity='100%' py={4} alignItems='center' justify={{ md: 'center', sm: 'center' }} transitionDuration='200ms'>
         <Flex w='100%' justify='center' align='center' flexDirection='row' columnGap={10}>
           <Tooltip placement='bottom' label='Under Construction!' zIndex={2}>

@@ -4,6 +4,8 @@ import placeholder from '@public/placeholder300x250.png'
 import Image from '@components/Image'
 import Project from '@projects/Project'
 import SectionHeading from '@home/Sections/SectionHeading'
+import thumbnailLetterGo from '@public/app-lettergo.png'
+import thumbnail12HourStudy from '@public/app-12hourstudy.png'
 
 const Projects = () => {
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
@@ -17,40 +19,37 @@ const Projects = () => {
         {/* Begin projects */}
         <Flex direction='column' align='center' justify='center' gap='4.8rem'>
           {/* Project 1 */}
-          <Project title='12 Hour Study' href='#' linkText='Live Demo' type='odd'>
+          <Project title='12 Hour Study' href='https://12hourstudy.netlify.app' thumbnailSrc={thumbnail12HourStudy} linkText='Live Demo' type='odd'>
             <Text>
-              A{' '}
-              <em>
-                <strong>Pomodoro timer app</strong>
-              </em>{' '}
-              aimed at boosting productivity. The app generates reports based on your study habits, and gives you an idea of how much studying you&apos;re doing
-              over time. The app was inspired by the &quot;study with me&quot; trend of videos on YouTube, which often feature an on-screen Pomodoro timer.
+              A&nbsp;<strong>Pomodoro timer app</strong>&nbsp; aimed at boosting productivity. The app generates reports based on your study habits, and gives
+              you an idea of how much studying you&apos;re doing over time. The app was inspired by the &quot;study with me&quot; trend of videos on YouTube,
+              which often feature an on-screen Pomodoro timer.
             </Text>
-            <Text fontSize='md'>Built with Next.js, Express.js, MongoDB, React.js, Nivo, and Chakra UI.</Text>
+            <Text as='i' fontWeight='500' textAlign={{ base: 'center', md: 'left' }} fontSize='md' textDecoration='italic'>
+              Built with Next.js, Express.js, MongoDB, React.js, Nivo, and Chakra UI.
+            </Text>
           </Project>
           {/* End Project 1 */}
           {/* Project 2 */}
-          <Project title='LetterGo' href='#' linkText='Live Demo' type='even'>
+          <Project title='LetterGo' href='https://lettergo.vercel.app' thumbnailSrc={thumbnailLetterGo} linkText='Live Demo' type='even'>
             <Text>
-              A <strong>word game</strong> that challenges users form as many heterograms as possible before running out of time. Allows for OAuth 2 login via
-              Google and GitHub. Features a leaderboard listing the highest scores.
+              A&nbsp;<strong>word game</strong>&nbsp;that challenges users form as many heterograms as possible before running out of time. Allows for OAuth 2
+              login via Google and GitHub. Features a leaderboard listing the highest scores.
             </Text>
-            <Text fontWeight='500' textAlign={{ base: 'center', md: 'right' }} fontSize='md'>
-              <i>Built with Next.js, Prisma, PostgreSQL, and Tailwind CSS/UI.</i>
+            <Text as='i' fontWeight='500' textAlign={{ base: 'center', md: 'right' }} fontSize='md'>
+              Built with Next.js, Prisma, PostgreSQL, and Tailwind CSS/UI.
             </Text>
           </Project>
           {/* End project 2 */}
           {/* Project 3 */}
 
-          <Project title='The Grind' href='#' linkText='Live Demo' type='odd'>
+          <Project title='The Grind' href='#' thumbnailSrc={thumbnailLetterGo} linkText='Live Demo' type='odd'>
             <Text>
-              A{' '}
-              <em>
-                <strong>mock website for a fictional coffee shop.</strong>
-              </em>{' '}
-              Features an online ordering system with e-commerce components.
+              A&nbsp;<strong>mock website for a fictional coffee shop.</strong>&nbsp; Features an online ordering system with e-commerce components.
             </Text>
-            <Text>Built with Next.js and Tailwind CSS/UI.</Text>
+            <Text as='i' fontWeight='500' textAlign={{ base: 'center', md: 'left' }} fontSize='md' textDecoration='italic'>
+              Built with Next.js and Tailwind CSS/UI.
+            </Text>
           </Project>
           {/* End Project 3*/}
         </Flex>

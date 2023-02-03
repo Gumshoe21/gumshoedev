@@ -1,19 +1,20 @@
 import { Flex, Box, Text, Heading, useColorModeValue } from '@chakra-ui/react'
 import ChakraLink from '@components/ChakraLink'
-import placeholder from '@public/app-lettergo.png'
 import Image from '@components/Image'
 import NextImage from 'next/image'
+import type { StaticImageData } from 'next/image'
 
 interface IProject {
   type: string
-  href: string
   title: string
   linkText: string
+  href: string
+  thumbnailSrc: StaticImageData
   children: JSX.Element[]
 }
 
 const Project = (props: IProject) => {
-  const { type, title, children, linkText, ...rest } = props
+  const { type, title, linkText, thumbnailSrc, children, href, ...rest } = props
 
   return (
     <Flex direction={{ base: 'column-reverse', md: `${type === 'even' ? 'row-reverse' : 'row'}` }} justify='center' align='center' gap={{ base: 8, md: 4 }}>
@@ -31,12 +32,14 @@ const Project = (props: IProject) => {
         </Flex>
         {/* Live Demo link */}
         <Flex fontSize='xl' fontWeight='bold' direction='column' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
-          <ChakraLink {...rest}>{linkText}</ChakraLink>
+          <ChakraLink href={href} {...rest}>
+            {linkText}
+          </ChakraLink>
         </Flex>
       </Flex>
       {/* Project image */}
       <Flex borderColor='whiteAlpha.800' borderWidth={1} borderStyle='solid' justify='space-between' align='space-between'>
-        <Image src={placeholder} alt='' />
+        <Image src={thumbnailSrc} alt='' />
       </Flex>
     </Flex>
   )
