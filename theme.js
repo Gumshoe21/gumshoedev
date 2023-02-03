@@ -17,6 +17,13 @@ const theme = extendTheme({
         bg: mode('whiteAlpha.900', 'gray.800')(props),
         color: mode('gray.800', 'whiteAlpha.900')(props),
       },
+      '#__next': {
+        width: '100vw',
+      },
+      html: {
+        width: '100vw',
+        'overflow-x': 'hidden',
+      },
     }),
   },
 
