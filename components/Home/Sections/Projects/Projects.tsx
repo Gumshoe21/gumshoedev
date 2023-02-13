@@ -6,6 +6,7 @@ import Project from '@projects/Project'
 import SectionHeading from '@home/Sections/SectionHeading'
 import thumbnailLetterGo from '@public/app-lettergo.png'
 import thumbnail12HourStudy from '@public/app-12hourstudy.png'
+import thumbnailTheGrind from '@public/app-thegrind.png'
 
 const Projects = () => {
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
@@ -43,7 +44,7 @@ const Projects = () => {
           {/* End project 2 */}
           {/* Project 3 */}
 
-          <Project title='The Grind' href='#' thumbnailSrc={thumbnailLetterGo} linkText='Live Demo' type='odd'>
+          <Project title='The Grind' href='coming.soon.com' thumbnailSrc={thumbnailTheGrind} linkText='Live Demo' type='odd'>
             <Text>
               A&nbsp;<strong>mock website for a fictional coffee shop.</strong>&nbsp; Features an online ordering system with e-commerce components.
             </Text>

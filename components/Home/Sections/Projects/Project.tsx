@@ -16,6 +16,8 @@ interface IProject {
 const Project = (props: IProject) => {
   const { type, title, linkText, thumbnailSrc, children, href, ...rest } = props
 
+  const projectShadow = useColorModeValue('0px 13px 37px -12px #000', '0')
+
   return (
     <Flex direction={{ base: 'column-reverse', md: `${type === 'even' ? 'row-reverse' : 'row'}` }} justify='center' align='center' gap={{ base: 8, md: 4 }}>
       {/* Project description */}
@@ -31,14 +33,14 @@ const Project = (props: IProject) => {
           </Flex>
         </Flex>
         {/* Live Demo link */}
-        <Flex fontSize='xl' fontWeight='bold' direction='column' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
+        <Flex fontSize='lg' fontWeight='bold' direction='column' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
           <ChakraLink href={href} {...rest}>
             {linkText}
           </ChakraLink>
         </Flex>
       </Flex>
       {/* Project image */}
-      <Flex borderColor='whiteAlpha.800' borderWidth={1} borderStyle='solid' justify='space-between' align='space-between'>
+      <Flex boxShadow={projectShadow} justify='space-between' align='space-between'>
         <Image src={thumbnailSrc} alt='' />
       </Flex>
     </Flex>

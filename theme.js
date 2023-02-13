@@ -21,8 +21,17 @@ const theme = extendTheme({
         width: '100vw',
       },
       html: {
-        width: '100vw',
         'overflow-x': 'hidden',
+      },
+      '.progress-bar': {
+        position: 'fixed',
+        top: '72px',
+        left: 0,
+        right: 0,
+        height: '10px',
+        bg: mode('blue.300', 'purple.300')(props),
+        'transform-origin': '0%',
+        'z-index': 2,
       },
     }),
   },
