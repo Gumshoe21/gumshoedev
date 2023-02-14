@@ -34,22 +34,22 @@ const Projects = () => {
           {/* Project 2 */}
           <Project title='LetterGo' href='https://lettergo.vercel.app' thumbnailSrc={thumbnailLetterGo} linkText='Live Demo' type='even'>
             <Text>
-              A&nbsp;<strong>word game</strong>&nbsp;that challenges users form as many heterograms as possible before running out of time. Allows for OAuth 2
-              login via Google and GitHub. Features a leaderboard listing the highest scores.
+              A&nbsp;<strong>word game</strong>&nbsp;that challenges users to form as many heterograms as possible before running out of time. Allows for OAuth
+              2 login via Google and GitHub. Features a leaderboard listing the highest scores.
             </Text>
             <Text as='i' fontWeight='500' textAlign={{ base: 'center', md: 'right' }} fontSize='md'>
-              Built with Next.js, Prisma, PostgreSQL, and Tailwind CSS/UI.
+              Built with Next.js, NextAuth, Prisma, PostgreSQL, and Tailwind CSS/UI.
             </Text>
           </Project>
           {/* End project 2 */}
           {/* Project 3 */}
 
-          <Project title='The Grind' href='coming.soon.com' thumbnailSrc={thumbnailTheGrind} linkText='Live Demo' type='odd'>
+          <Project title='The Grind' href='coming.soon.com' thumbnailSrc={thumbnailTheGrind} linkText='Demo Coming Soon' type='odd'>
             <Text>
               A&nbsp;<strong>mock website for a fictional coffee shop.</strong>&nbsp; Features an online ordering system with e-commerce components.
             </Text>
             <Text as='i' fontWeight='500' textAlign={{ base: 'center', md: 'left' }} fontSize='md' textDecoration='italic'>
-              Built with Next.js and Tailwind CSS/UI.
+              Built with Next.js, NextAuth, MongoDB, and Tailwind CSS/UI.
             </Text>
           </Project>
           {/* End Project 3*/}

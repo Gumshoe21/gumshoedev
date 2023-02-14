@@ -33,16 +33,22 @@ const Project = (props: IProject) => {
           </Flex>
         </Flex>
         {/* Live Demo link */}
-        <Flex fontSize='lg' fontWeight='bold' direction='column' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
+        <Flex fontSize='md' fontWeight='bold' direction='column' textAlign={{ base: 'center', md: `${type === 'even' ? 'right' : 'left'}` }}>
           <ChakraLink href={href} {...rest}>
             {linkText}
+          </ChakraLink>
+          <ChakraLink href={href} {...rest}>
+            GitHub
           </ChakraLink>
         </Flex>
       </Flex>
       {/* Project image */}
-      <Flex boxShadow={projectShadow} justify='space-between' align='space-between'>
-        <Image src={thumbnailSrc} alt='' />
-      </Flex>
+
+      <ChakraLink href={href}>
+        <Flex _hover={{ transform: 'translateY(-10px)' }} transitionDuration='200ms' boxShadow={projectShadow} justify='space-between' align='space-between'>
+          <Image src={thumbnailSrc} alt='' />
+        </Flex>
+      </ChakraLink>
     </Flex>
   )
 }
