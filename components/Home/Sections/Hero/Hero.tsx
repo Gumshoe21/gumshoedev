@@ -76,7 +76,7 @@ const Hero = () => {
         }}
       >
         <SocialButton icon={<FaEnvelope size={26} />} href='mailto:msmilansky@gmail.com' />
-        <SocialButton icon={<FaTwitter size={26} />} href='https://twitter.com/Gumshoe21' />
+        <SocialButton icon={<FaTwitter size={26} />} href='https://twitter.com/gumshoe_dev' />
         <SocialButton icon={<FaLinkedin size={26} />} href='https://linkedin.com/in/matthew-smilansky' />
         <SocialButton icon={<FaGithub size={26} />} href='https://github.com/Gumshoe21' />
       </Flex>
