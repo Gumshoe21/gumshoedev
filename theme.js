@@ -36,7 +36,7 @@ const theme = extendTheme({
         top: '72px',
         left: 0,
         right: 0,
-        height: '10px',
+        height: '4px',
         bg: mode('blue.300', 'purple.300')(props),
         'transform-origin': '0%',
         'z-index': 2,
