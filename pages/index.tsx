@@ -13,10 +13,9 @@ const Home = () => {
     <>
       <Navbar />
 
-      <Box>
-        <Flex direction='column' align='center' justify='center' maxW='6xl' mx='auto' px='20'>
-
-        <motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
+      <Box sx={{ 'scroll-behavior': 'smooth' }}>
+        <Flex scrollBehavior='smooth' direction='column' align='center' justify='center' maxW='6xl' mx='auto' px='20'>
+          <motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
           <Hero />
           <AboutMe />
           <Technologies />

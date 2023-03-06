@@ -40,9 +40,11 @@ const Navbar = () => {
     <Box zIndex='2' position='fixed' css={{ backdropFilter: 'blur(5px)' }} w='100%'>
       <Flex opacity='100%' py={4} alignItems='center' justify={{ md: 'center', sm: 'center' }} transitionDuration='200ms'>
         <Flex w='100%' justify='center' align='center' flexDirection='row' columnGap={10}>
-          <Tooltip placement='bottom' label='Under Construction!' zIndex={2}>
-            <Text fontWeight='bold'>Projects</Text>
-          </Tooltip>
+          <NavLink href='#hero' text={'Home'} />
+          <NavLink href='#about' text={'About Me'} />
+
+          <NavLink href='#techstack' text={'Tech Stack'} />
+          <NavLink href='#projects' text={'Projects'} />
           <NavLink href='https://blog.gumshoe.dev' text={'Blog'} />
           <IconButton
             aria-label={' '}

@@ -8,7 +8,7 @@ import { SiJavascript, SiMongodb, SiExpress, SiRubyonrails, SiPostgresql, SiPost
 
 const Technologies = () => {
   return (
-    <Flex direction='column' py={20} w='100vw'>
+    <Flex id='techstack' direction='column' py={20} w='100vw'>
       <Flex direction='column' gap={10}>
         <Flex align='center' justify='center' mx={12} direction='column'>
           <SectionHeading>Tech Stack / Tools:</SectionHeading>

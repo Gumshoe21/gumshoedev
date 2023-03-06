@@ -1,5 +1,5 @@
 import { keyframes, useColorModeValue, Box, Flex, Heading, Link } from '@chakra-ui/react'
-import profilePic from '@public/gumshoe.png'
+import profilePic from '@public/headshot.jpg'
 
 import SocialButton from './SocialButton'
 import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
@@ -7,7 +7,7 @@ import Image from '@components/Image'
 
 const Hero = () => {
   const section1BgColor = useColorModeValue('orange.100', 'gray.600')
-  const profilePicShadow = useColorModeValue('0px 10px 10px -12px #000', '0px 10px 10px -12px #fff')
+  const profilePicShadow = useColorModeValue('0px 12px 27px -12px #000', '0px 12px 27px -10px #fff')
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
 
   const fadeIn = (dir: string): string => {
@@ -16,6 +16,7 @@ const Hero = () => {
 
   return (
     <Flex
+      id='hero'
       align='center'
       justify='center'
       flexDirection='column'
@@ -35,13 +36,7 @@ const Hero = () => {
           animation: `1000ms ${fadeIn('top')} forwards`,
         }}
       >
-        <Image
-          borderRadius='50%'
-          src={profilePic}
-          boxShadow={profilePicShadow}
-          transform='translateY(-10px)'
-          alt='Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev'
-        />
+        <img id='arlen' src='headshot.jpg' transform='translateY(-1px)' alt='Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev' />
       </Box>
       <Heading
         as='h1'

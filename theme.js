@@ -16,12 +16,20 @@ const theme = extendTheme({
       body: {
         bg: mode('whiteAlpha.900', 'gray.800')(props),
         color: mode('gray.800', 'whiteAlpha.900')(props),
+        'scroll-behavior': 'smooth',
       },
       '#__next': {
         width: '100vw',
+        'scroll-behavior': 'smooth',
+      },
+      '#arlen': {
+        'border-radius': '50%',
+        'object-fit': 'cover',
+        'box-shadow': '0px 12px 27px -12px #000',
       },
       html: {
         'overflow-x': 'hidden',
+        'scroll-behavior': 'smooth !important',
       },
       '.progress-bar': {
         position: 'fixed',

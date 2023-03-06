@@ -12,7 +12,7 @@ const Projects = () => {
   const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
 
   return (
-    <Flex direction='column' py={20}>
+    <Flex id='projects' direction='column' py={20}>
       <Flex direction='column' gap={10} bg={heroBgColor} transitionDuration='200ms'>
         <Flex direction='column' align='center' justify='center'>
           <SectionHeading>Projects</SectionHeading>
