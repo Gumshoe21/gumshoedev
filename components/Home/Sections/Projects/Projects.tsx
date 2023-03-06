@@ -44,7 +44,7 @@ const Projects = () => {
           {/* End project 2 */}
           {/* Project 3 */}
 
-          <Project title='The Grind' href='coming.soon.com' thumbnailSrc={thumbnailTheGrind} linkText='Demo Coming Soon' type='odd'>
+          <Project title='The Grind' href='https://thegrind.vercel.app' thumbnailSrc={thumbnailTheGrind} linkText='Live Demo' type='odd'>
             <Text>
               A&nbsp;<strong>mock website for a fictional coffee shop.</strong>&nbsp; Features an online ordering system with e-commerce components.
             </Text>
