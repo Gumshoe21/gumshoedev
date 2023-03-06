@@ -14,7 +14,7 @@ interface IProject {
 }
 
 const Project = (props: IProject) => {
-  const { type, title, linkText, thumbnailSrc, children, href, ...rest } = props
+  const { type, title, linkText, thumbnailSrc, children, href, githubHref, ...rest } = props
 
   const projectShadow = useColorModeValue('0px 13px 37px -12px #000', '0')
 
@@ -37,7 +37,7 @@ const Project = (props: IProject) => {
           <ChakraLink href={href} {...rest}>
             {linkText}
           </ChakraLink>
-          <ChakraLink href={href} {...rest}>
+          <ChakraLink href={githubHref} {...rest}>
             GitHub
           </ChakraLink>
         </Flex>
