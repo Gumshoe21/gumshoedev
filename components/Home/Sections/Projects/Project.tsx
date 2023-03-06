@@ -9,8 +9,10 @@ interface IProject {
   title: string
   linkText: string
   href: string
+  githubHref:string
   thumbnailSrc: StaticImageData
   children: JSX.Element[]
+
 }
 
 const Project = (props: IProject) => {
