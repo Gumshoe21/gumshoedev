@@ -36,7 +36,7 @@ const Hero = () => {
           animation: `1000ms ${fadeIn('top')} forwards`,
         }}
       >
-        <img id='arlen' src='headshot.jpg'  alt='Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev' />
+        <img id='arlen' src='headshot.jpg' alt='Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev' />
       </Box>
       <Heading
         as='h1'
@@ -64,7 +64,7 @@ const Hero = () => {
           'animation-delay': '200ms',
         }}
       >
-        Front-End Web Developer
+        Software Developer
       </Heading>
       <Flex
         columnGap={2}
