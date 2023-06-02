@@ -1,19 +1,27 @@
-import { keyframes, useColorModeValue, Box, Flex, Heading, Link } from '@chakra-ui/react'
-import profilePic from '@public/headshot.jpg'
-
+import { keyframes, useColorModeValue, Box, Flex, Heading } from '@chakra-ui/react'
 import SocialButton from './SocialButton'
 import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
-import Image from '@components/Image'
 
 const Hero = () => {
-  const section1BgColor = useColorModeValue('orange.100', 'gray.600')
-  const profilePicShadow = useColorModeValue('0px 12px 27px -12px #000', '0px 12px 27px -10px #fff')
-  const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
+  //  const section1BgColor = useColorModeValue('orange.100', 'gray.600')
+  // const profilePicShadow = useColorModeValue('0px 12px 27px -12px #000', '0px 12px 27px -10px #fff')
+  // const heroBgColor = useColorModeValue('whiteAlpha.900', 'gray.800')
 
   const fadeIn = (dir: string): string => {
     return keyframes`100% { ${dir}:0; }`
   }
 
+
+  const blinkCaret =
+    keyframes`
+      from, to { border-color: transparent }
+      50% { border-color: blue }
+    `;
+
+  const typing = keyframes`
+      from { width: 0 }
+      to { width: 100% }
+    `;
   return (
     <Flex
       id='hero'
@@ -53,6 +61,22 @@ const Hero = () => {
       >
         Matthew Smilansky
       </Heading>
+      <Flex display='flex' justifyContent='center'>
+      <Box
+        as='h1'
+        color='red'
+        overflow='hidden'
+        borderRight='1rem solid orange'
+        whiteSpace='nowrap'
+        margin='0 auto'
+        letterSpacing='.15em'
+        sx={{
+          animation: `${typing} 2s steps(30, end),${blinkCaret} 1s step-end infinite`,
+        }}
+        >
+        The cat and the hat.
+      </Box>
+      </Flex>
       <Heading
         fontSize={{ base: 'md', md: '2xl' }}
         fontFamily='Montserrat'
