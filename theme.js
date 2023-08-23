@@ -1,61 +1,56 @@
-// 1. import `extendTheme` function
-import { extendTheme } from '@chakra-ui/react'
-import { redirect } from 'next/dist/server/api-utils'
-import { mode } from '@chakra-ui/theme-tools'
+import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-// 2. Add your color mode config
-const theme = extendTheme({
-  initialColorMode: 'light',
-  useSystemColorMode: false,
-  fonts: {
-    heading: 'Poly, open-sans',
-  },
+const styles = {
+	global: props => ({
+		body: {
+			bg: mode('#f0e7db', '#202023')(props),
+		},
+	}),
+};
 
-  styles: {
-    global: (props) => ({
-      body: {
-        bg: mode('whiteAlpha.900', 'gray.800')(props),
-        color: mode('gray.800', 'whiteAlpha.900')(props),
-        'scroll-behavior': 'smooth',
-      },
-      '#__next': {
-        width: '100vw',
-        'scroll-behavior': 'smooth',
-      },
-      '#arlen': {
-        'border-radius': '50%',
-        'object-fit': 'cover',
-        'box-shadow': '0px 12px 27px -12px #000',
-      },
-      html: {
-        'overflow-x': 'hidden',
-        'scroll-behavior': 'smooth !important',
-      },
-      '.progress-bar': {
-        position: 'fixed',
-        top: '72px',
-        left: 0,
-        right: 0,
-        height: '4px',
-        bg: mode('blue.300', 'purple.300')(props),
-        'transform-origin': '0%',
-        'z-index': 2,
-      },
-    }),
-  },
+const components = {
+	Heading: {
+		variants: {
+			'section-title': {
+				textDecoration: 'underline',
+				fontSize: 20,
+				textUnderlineOffset: 6,
+				textDecorationColor: '#525252',
+				textDecorationThickness: 4,
+				marginTop: 3,
+				marginBottom: 4,
+			},
+			'page-title': {
+				textDecoration: 'underline',
+				textUnderlineOffset: 10,
+				textDecorationColor: '#525252',
+				textDecorationThickness: 4,
+				marginTop: 3,
+				marginBottom: 4,
+			},
+		},
+	},
+	Link: {
+		baseStyle: props => ({
+			color: mode('#3d7aed', '#ff63c3')(props),
+			textUnderlineOffset: 3,
+		}),
+	},
+};
 
-  components: {
-    Link: {
-      baseStyle: (props) => ({
-        color: mode('blue.600', 'purple.300')(props),
-      }),
-    },
-    Container: {
-      baseStyle: {
-        padding: '5rem',
-      },
-    },
-  },
-})
+const fonts = {
+	heading: "'M PLUS Rounded 1c'",
+};
 
-export default theme
+const colors = {
+	grassTeal: '#88ccca',
+};
+
+const config = {
+	initialColorMode: 'dark',
+	useSystemColorMode: true,
+};
+
+const theme = extendTheme({ config, styles, components, fonts, colors });
+export default theme;

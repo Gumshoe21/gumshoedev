@@ -1,34 +1,27 @@
-import React from 'react'
-import { Box, Flex } from '@chakra-ui/react'
-import Navbar from '@navbar/Navbar'
-import Hero from '@home/Sections/Hero/Hero'
-import AboutMe from '@home/Sections/AboutMe'
-import Technologies from '@home/Sections/Technologies/Technologies'
-import Projects from '@home/Sections/Projects/Projects'
-import { motion, useScroll, useSpring } from 'framer-motion'
+import Image from 'next/image';
+import { Container, Heading, Box, chakra, Flex } from '@chakra-ui/react';
+import ArticleLayout from '../components/layouts/Article';
+import profileImg from '@public/headshot.jpg';
+const ProfileImage = chakra(Image, {
+	shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop),
+});
+const Page = () => {
+	return (
+		<ArticleLayout title='Home'>
+			<Container maxW='container.sm'>
+				<Box display={{ md: 'flex' }} h='100%'>
+					<Flex flexDirection='column' flexGrow={1}>
+						<Box>
+							<Heading as='h2' variant='page-title' letterSpacing={'tighter'}>
+								Matthew Smilansky
+							</Heading>
+							<p>Software Engineer · Technical Writer · Hobbyist Game Dev</p>
+						</Box>
+					</Flex>
+				</Box>
+			</Container>
+		</ArticleLayout>
+	);
+};
 
-const Home = () => {
-  const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  })
-  return (
-    <>
-      <Navbar />
-
-      <Box sx={{ 'scroll-behavior': 'smooth' }}>
-        <Flex scrollBehavior='smooth' direction='column' align='center' justify='center' maxW='6xl' mx='auto' px='20'>
-          <motion.div className='progress-bar' style={{ scaleX }} />
-          <Hero />
-          <AboutMe />
-          <Technologies />
-          <Projects />
-        </Flex>
-      </Box>
-    </>
-  )
-}
-
-export default Home
+export default Page;
