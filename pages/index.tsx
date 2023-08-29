@@ -15,20 +15,19 @@ const Home = () => {
     restDelta: 0.001,
   })
   return (
-    <>
-      <Navbar />
+		<>
+			<Navbar />
 
-      <Box sx={{ 'scroll-behavior': 'smooth' }}>
-        <Flex scrollBehavior='smooth' direction='column' align='center' justify='center' maxW='6xl' mx='auto' px='20'>
-          <motion.div className='progress-bar' style={{ scaleX }} />
-          <Hero />
-          <AboutMe />
-          <Technologies />
-          <Projects />
-        </Flex>
-      </Box>
-    </>
-  )
+			<Box sx={{ 'scroll-behavior': 'smooth' }}>
+				<motion.div className='progress-bar' style={{ scaleX }} />
+				<Hero />
+				<AboutMe />
+				<Technologies />
+				<Projects />
+				<Box w='100%' h='1px' borderBottom='1px solid red'></Box>
+			</Box>
+		</>
+	);
 }
 
 export default Home
