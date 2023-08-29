@@ -35,7 +35,7 @@ const AboutMe = () => {
 								immediately hooked.
 							</Text>
 							<Text>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After graduating university&#44; I started developing an
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After graduating from UCLA&#44; I started developing an
 								interest in computer programming and began learning how to code websites and web applications. And here
 								I am now!
 							</Text>
