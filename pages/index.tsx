@@ -21,10 +21,16 @@ const Home = () => {
 			<Box sx={{ 'scroll-behavior': 'smooth' }}>
 				<motion.div className='progress-bar' style={{ scaleX }} />
 				<Hero />
+
+				<Box className='section-divider'></Box>
 				<AboutMe />
+
+				<Box className='section-divider'></Box>
 				<Technologies />
+
+				<Box className='section-divider'></Box>
 				<Projects />
-				<Box w='100%' h='1px' borderBottom='1px solid red'></Box>
+				<Box className='section-divider'></Box>
 			</Box>
 		</>
 	);

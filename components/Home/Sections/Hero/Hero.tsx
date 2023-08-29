@@ -21,7 +21,7 @@ const Hero = () => {
 				align='center'
 				justify='center'
 				flexDirection='column'
-				height='calc(100vh - 72px)'
+				height='100vh'
 				transitionDuration='200ms'
 				pt={40}
 				pb={20}
@@ -45,7 +45,7 @@ const Hero = () => {
 				</Box>
 				<Heading
 					as='h1'
-					fontSize={{ base: '4xl', md: '6xl' }}
+					fontSize={{ base: '3xl', md: '5xl' }}
 					fontWeight='600'
 					letterSpacing='1px'
 					py={2}
@@ -59,7 +59,7 @@ const Hero = () => {
 					Matthew Smilansky
 				</Heading>
 				<Heading
-					fontSize={{ base: 'md', md: '2xl' }}
+					fontSize={{ base: 'lg', md: 'xl' }}
 					fontFamily='Montserrat'
 					fontWeight='600'
 					position='relative'
@@ -69,7 +69,7 @@ const Hero = () => {
 						'animation-delay': '200ms',
 					}}
 				>
-					Software Developer
+					Software Engineer
 				</Heading>
 				<Flex
 					columnGap={2}

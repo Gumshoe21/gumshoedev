@@ -10,8 +10,8 @@ const AboutMe = () => {
 
   return (
 		<SectionLayout>
-			<Flex id='about' direction='column' py={20}>
-				<Flex direction='column' gap={10} bg={heroBgColor} transitionDuration='200ms'>
+			<Flex id='about' direction='column' py={32}>
+				<Flex direction='column' gap={24} bg={heroBgColor} transitionDuration='200ms'>
 					<Flex direction='column' align='center' justify='center'>
 						<SectionHeading>About Me</SectionHeading>
 					</Flex>

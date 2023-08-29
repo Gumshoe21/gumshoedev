@@ -13,8 +13,8 @@ const Projects = () => {
 
   return (
 		<SectionLayout>
-			<Flex id='projects' direction='column' py={20}>
-				<Flex direction='column' gap={10} bg={heroBgColor} transitionDuration='200ms'>
+			<Flex id='projects' direction='column' py={32}>
+				<Flex direction='column' gap={24} bg={heroBgColor} transitionDuration='200ms'>
 					<Flex direction='column' align='center' justify='center'>
 						<SectionHeading>Projects</SectionHeading>
 					</Flex>
