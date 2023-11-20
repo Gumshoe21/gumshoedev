@@ -118,7 +118,8 @@ const Projects = () => {
 						>
 							<Text>
 								A&nbsp;<strong>Twitch chat bot</strong>&nbsp;that features
-								custom commands and channel point redemption events.
+								custom commands, notifications, statistics, and channel point
+								redemption events.
 							</Text>
 							<Text
 								as="i"
