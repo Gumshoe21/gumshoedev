@@ -117,7 +117,7 @@ const Projects = () => {
 							type="even"
 						>
 							<Text>
-								A&nbsp;<strong>Twitch chat bot </strong>&nbsp;that features
+								A&nbsp;<strong>Twitch chat bot</strong>&nbsp;that features
 								custom commands and channel point redemption events.
 							</Text>
 							<Text
@@ -126,8 +126,8 @@ const Projects = () => {
 								textAlign={{ base: "center", md: "right" }}
 								fontSize="md"
 							>
-								Built with TypeScript, MongoDB, Twitch API, and the helpful
-								feedback of my viewers.
+								Built with TypeScript, MongoDB, Twitch Messaging Interface
+								(tmi.js), Twitch API, and the helpful feedback of my viewers.
 							</Text>
 						</Project>
 						{/* End project 4 */}
