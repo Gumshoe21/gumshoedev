@@ -9,7 +9,8 @@ import {
 import profilePic from "@public/headshot.jpg";
 
 import SocialButton from "./SocialButton";
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaFilePdf } from 'react-icons/fa';
+import { GrDocumentPdf } from 'react-icons/gr';
 import { FaXTwitter } from 'react-icons/fa6';
 import Image from '@components/Image';
 import SectionLayout from '@components/Layouts/SectionLayout';
@@ -88,6 +89,7 @@ const Hero = () => {
 						animation: `1s ${fadeIn('bottom')} forwards`,
 					}}
 				>
+					<SocialButton icon={<FaFilePdf size={26} />} href='/resume.pdf' />
 					<SocialButton icon={<FaEnvelope size={26} />} href='mailto:msmilansky@gmail.com' />
 					<SocialButton icon={<FaXTwitter size={26} />} href='https://twitter.com/gumshoedev' />
 					<SocialButton icon={<FaLinkedin size={26} />} href='https://linkedin.com/in/matthew-smilansky' />
