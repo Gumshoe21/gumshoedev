@@ -1,14 +1,7 @@
-import {
-	keyframes,
-	useColorModeValue,
-	Box,
-	Flex,
-	Heading,
-	Link,
-} from "@chakra-ui/react";
-import profilePic from "@public/headshot.jpg";
+import { keyframes, useColorModeValue, Box, Flex, Heading, Link } from '@chakra-ui/react';
+import profilePic from '@public/headshot.jpg';
 
-import SocialButton from "./SocialButton";
+import SocialButton from './SocialButton';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import { GrDocumentPdf } from 'react-icons/gr';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -25,18 +18,7 @@ const Hero = () => {
 
 	return (
 		<SectionLayout>
-			<Flex
-				id='hero'
-				align='center'
-				justify='center'
-				flexDirection='column'
-				height='100vh'
-				transitionDuration='200ms'
-				pt={40}
-				pb={20}
-				textAlign='center'
-				position='relative'
-			>
+			<Flex id='hero' align='center' justify='center' flexDirection='column' height='100vh' transitionDuration='200ms' pt={40} pb={20} textAlign='center' position='relative'>
 				<Box
 					alignSelf='center'
 					borderRadius='50%'
@@ -46,11 +28,7 @@ const Hero = () => {
 						animation: `1000ms ${fadeIn('top')} forwards`,
 					}}
 				>
-					<img
-						id='arlen'
-						src='headshot.jpg'
-						alt='Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev'
-					/>
+					<img id='arlen' src='headshot.jpg' alt='Profile Picture for Matthew Smilansky on his personal website, gumshoe.dev' />
 				</Box>
 				<Heading
 					as='h1'
@@ -78,7 +56,7 @@ const Hero = () => {
 						'animation-delay': '200ms',
 					}}
 				>
-					Software Engineer
+					IT Professional & Hobbyist Programmer
 				</Heading>
 				<Flex
 					columnGap={2}
@@ -89,9 +67,9 @@ const Hero = () => {
 						animation: `1s ${fadeIn('bottom')} forwards`,
 					}}
 				>
-					<SocialButton icon={<FaFilePdf size={26} />} href='/resume.pdf' />
+					{/* <SocialButton icon={<FaFilePdf size={26} />} href='/resume.pdf' /> */}
 					<SocialButton icon={<FaEnvelope size={26} />} href='mailto:msmilansky@gmail.com' />
-					<SocialButton icon={<FaXTwitter size={26} />} href='https://twitter.com/gumshoedev' />
+					{/* <SocialButton icon={<FaXTwitter size={26} />} href='https://twitter.com/gumshoedev' /> */}
 					<SocialButton icon={<FaLinkedin size={26} />} href='https://linkedin.com/in/matthew-smilansky' />
 					<SocialButton icon={<FaGithub size={26} />} href='https://github.com/Gumshoe21' />
 				</Flex>
