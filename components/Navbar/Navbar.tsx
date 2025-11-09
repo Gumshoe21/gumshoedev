@@ -1,67 +1,31 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 
-import {
-  Box,
-  Flex,
-  Avatar,
-  HStack,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  Stack,
-  useColorMode,
-  Container,
-  Spacer,
-  Link,
-  propNames,
-  useColorModeValue,
-  Tooltip,
-  Text,
-} from '@chakra-ui/react'
+import { Box, Flex, Avatar, HStack, IconButton, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, useDisclosure, Stack, useColorMode, Container, Spacer, Link, propNames, useColorModeValue, Tooltip, Text } from '@chakra-ui/react';
 
-import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import NavLink from '@navbar/NavLink'
+import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import NavLink from '@navbar/NavLink';
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const { colorMode, toggleColorMode } = useColorMode()
+	const { isOpen, onOpen, onClose } = useDisclosure();
+	const { colorMode, toggleColorMode } = useColorMode();
 
-  const iconBackgroundColor = useColorModeValue('purple.600', 'orange.200')
+	const iconBackgroundColor = useColorModeValue('purple.600', 'orange.200');
 
-  const iconBackgroundHover = useColorModeValue('purple.800', 'orange.300')
-  const iconColor = useColorModeValue('whiteAlpha.900', 'gray.900')
+	const iconBackgroundHover = useColorModeValue('purple.800', 'orange.300');
+	const iconColor = useColorModeValue('whiteAlpha.900', 'gray.900');
 
-  return (
+	return (
 		<Box zIndex='2' position='fixed' css={{ backdropFilter: 'blur(5px)' }} w='100%'>
-			<Flex
-				opacity='100%'
-				py={4}
-				alignItems='center'
-				justify={{ md: 'center', sm: 'center' }}
-				transitionDuration='200ms'
-			>
+			<Flex opacity='100%' py={4} alignItems='center' justify={{ md: 'center', sm: 'center' }} transitionDuration='200ms'>
 				<Flex w='100%' justify='center' align='center' flexDirection='row' columnGap={10}>
 					<NavLink href='#hero' text={'Home'} />
 					<NavLink href='#about' text={'About Me'} />
 
-					<NavLink href='/resume.pdf' text={'Resume'} />
+					{/* <NavLink href='/resume.pdf' text={'Resume'} /> */}
 					<NavLink href='#projects' text={'Projects'} />
-					<NavLink href='#techstack' text={'Tech Stack'} />
+					{/* <NavLink href='#techstack' text={'Tech Stack'} /> */}
 					<NavLink href='https://blog.gumshoe.dev' text={'Blog'} />
-					<IconButton
-						aria-label={' '}
-						bg={iconBackgroundColor}
-						color={iconColor}
-						variant='solid'
-						_hover={{ bg: iconBackgroundHover }}
-						icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-						onClick={toggleColorMode}
-					/>
+					<IconButton aria-label={' '} bg={iconBackgroundColor} color={iconColor} variant='solid' _hover={{ bg: iconBackgroundHover }} icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />} onClick={toggleColorMode} />
 				</Flex>
 			</Flex>
 			{isOpen ? (
@@ -71,6 +35,6 @@ const Navbar = () => {
 			) : null}
 		</Box>
 	);
-}
+};
 
-export default Navbar
+export default Navbar;
